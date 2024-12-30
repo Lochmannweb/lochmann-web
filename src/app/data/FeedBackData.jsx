@@ -1,5 +1,6 @@
 export const FeedbackData = {
-    Title: "Why choose me",
+    Title: "Feedback",
+    Header: "Why choose me",
     Subheader: "If you choose me as your frontend developer, you don't have to go and bother with sleepless nights or the heart in the throat.",
     Tech: {
         title: "Technology",

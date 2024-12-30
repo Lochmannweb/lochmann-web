@@ -18,7 +18,8 @@ export const ContactPageHeader = {
 }
 
 export const HomePageContactFormular = {
-    title: "Do you have a brillant idea?",
+    title: "Contact",
+    header: "Do you have a brillant idea?",
     subheader: "Let's talk more about it",
 }
 

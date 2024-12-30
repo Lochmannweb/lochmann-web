@@ -6,7 +6,7 @@ import Tech from './components/Tech'
 import styled from '@emotion/styled';
 import Feedback from '@/app/components/Feedback'
 import Projects from '@/app/components/Projects'
-import ContactHomePage from '@/app/components/ContactHomePage'
+import ContactForm from '@/app/components/ContactForm'
 import Banner from '@/app/components/Banner'
 
 const Container = styled.div({
@@ -24,7 +24,7 @@ const Page = () => {
       <Projects/>
       <Tech/>
       <Feedback/>
-      <ContactHomePage />
+      <ContactForm />
     </Container> 
   )
 }

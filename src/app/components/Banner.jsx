@@ -9,31 +9,41 @@ const breakpoints = {
 };
 
 const Container = styled.div({
-  display: 'grid',
-  gap: '0rem',
+  display: 'flex',
+  gap: '1rem',
   margin: 'auto',
   textAlign: 'center',
   lineHeight: '2rem',
-  // marginTop: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    padding: '1rem',
-    display: 'flex',
+    padding: '2rem',
+    gap: '5rem',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    padding: '2rem',
-    fontSize: '20px',
+    // padding: '2rem',
+    // fontSize: '20px',
    },
 });
+
+const Title = styled.div({
+  fontSize: '13px',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '25px',
+    },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '18px',
+   },
+});
+
 
 function App() {
 
   return (
     <>
     <Container>
-      <p>Built From Scratch</p>
-      <p>Redesign</p>
-      <p>Branding</p>
-      <p>Online Shop</p>
+      <Title>Built From Scratch</Title>
+      <Title>Redesign</Title>
+      <Title>Branding</Title>
+      <Title>Online Shop</Title>
     </Container>
     </>
   );
