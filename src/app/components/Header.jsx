@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 import "@fontsource/keania-one";
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
+import Banner from '@/app/components/Banner'
 
 const breakpoints = {
   md: '768px', 
@@ -52,31 +53,32 @@ const Container = styled.div({
   },
 });
 
-const HeaderTitle = styled.div`
-  font-size: 35px;
-  text-align: center;
-  margin-bottom: 0.5rem;
-  line-height: 2rem;
-  font-family: Fantasy;
-  text-transform: uppercase;
+const HeaderTitle = styled.div({
+  fontSize: '35px',
+  textAlign: 'center',
+  marginBottom: '0.5rem',
+  lineHeight: '2rem',
+  fontFamily: 'Fantasy',
+  textTransform: 'uppercase',
 
   // Animation
-  opacity: 0; 
-  animation: fadeUp 1s ease-in-out forwards;
-  ${fadeUp}
+  opacity: '0',
+  animation: 'fadeUp 1s ease-in-out forwards',
+  ...fadeUp,
 
-  @media (min-width: ${breakpoints.md}) {
-    font-size: 80px;
-    line-height: 5.5rem;
-    margin-top: -2rem;
-  }
+  '@media (min-width: 768px)': { // Using breakpoints.md
+    fontSize: '80px',
+    lineHeight: '5.5rem',
+    marginTop: '-2rem',
+  },
 
-  @media (min-width: ${breakpoints.lg}) {
-    font-size: 100px;
-    line-height: 3rem;
-    margin-top: 2rem;
-  }
-`;
+  '@media (min-width: 1024px)': { // Using breakpoints.lg
+    fontSize: '100px',
+    lineHeight: '3rem',
+    marginTop: '2rem',
+  },
+});
+
 
 const Subheader = styled.div`
   font-size: 35px;
@@ -191,6 +193,23 @@ const Content3 = styled.div`
   }
 `;
 
+const Button = styled.div({
+  color: 'black',
+  fontSize: '15px',
+  fontFamily: 'Fantasy',
+  textAlign: 'center',
+  marginTop: '2rem',
+  background: 'white',
+  borderRadius: '25px',
+  justifySelf: 'center',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '20px',
+    width: '20%',
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      },
+});
+
 export default function Header() {
   const theme = useTheme();
   const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
@@ -217,7 +236,10 @@ export default function Header() {
             <Content2>{ForsideData.content2}</Content2>
             <Content3>{ForsideData.content3}</Content3>
           </ContentContainer>
-          <a className="text-black text-sm md:text-2xl md:w-56 lg:text-xl font-AntonSC text-center mt-7 md:mt-20 bg-white rounded-2xl m-auto w-36 hover:bg-gray hover:text-white" href="/Contact">GET IN TOUCH</a>
+          <Banner />
+          <Button>
+          <a  href="/Contact">GET IN TOUCH</a>
+          </Button>
       </Container>
     </>
   );

@@ -14,93 +14,59 @@ const breakpoints = {
 
 const Container = styled.div({
   margin: 'auto',
+  marginTop: '3rem',
+  marginBottom: '3rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
     justifyContent: 'center',
-    marginTop: '0rem',
-    width: '80%',
-    gap: '2rem',
+    gap: '8rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     marginTop: '0rem',
-    width: '50%',
+    marginBottom: '10rem',
+    gap: '8rem',
   },
 });
 
-const ImageContainer = styled.div({
-  margin: '1rem',
+const Title = styled.div({
+  fontSize: '25px',
+  // margin: 'auto',
+  display: 'contents',
+  transform: 'uppercase',
+  fontFamily: 'Emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
-    marginBottom: '3rem',
+    fontSize: '40px',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '60px',
   },
 });
 
 const Content = styled.div({
+  fontSize: '15px',
+  color: 'gray',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '80%',
     alignItems: 'center',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    width: '50%',
+    width: '40%',
   },
 });
 
-const Title = styled.div({
-  fontSize: '30px',
-  margin: 'auto',
-  fontFamily: '"Keania One", sans-serif',
-  borderBottomColor: '#A100FF',
-  borderWidth: 'thin',
-  textAlign: 'start',
-  borderRadius: '0px',
-  marginBottom: '1rem',
-
-  // scroll animation text
-  color: 'hsl(0 0% 100% / 0)',
-  backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
-  backgroundSize: '40% 100%',
-  backgroundRepeat: 'no-repeat',
-  animation: 'scroll-reveal linear forwards',
-  animationTimeline: 'view()',
-  backgroundClip: 'text',
-  [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '40px',
-    width: '80%',
-    textAlign: 'center',
-    marginBottom: '2rem',
-    borderColor: '#A100FF',
-    borderRadius: '0px 100px',
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '40px',
-    width: '50%',
-  },
-});
-
-const Text = styled.div({
-  fontSize: '15px',
-  color: 'hsl(0 0% 100% / 0)',
-  backgroundImage: 'linear-gradient(90deg, gray, white)',
-  backgroundClip: 'text',
-  [`@media (min-width: ${breakpoints.md})`]: {
-  },
-});
 
 const MyStory = () => {
   
   return ( 
     <>
+    <Container> 
       <Title>{AboutData.title}</Title>
-      <Container> 
-        <Content>
-          <Text>
-            {AboutData.subheder1} <br /> <br />
-            {AboutData.subheder2} <br /> <br />
-            {AboutData.subheder3} <br /> <br />
-          </Text>
-        </Content>
-        <ImageContainer>
-          <img src="/pf.jpg" alt="jpg" width={300} />
-        </ImageContainer>
+      <Content>
+          {AboutData.subheder1} <br /> <br />
+          {AboutData.subheder2} <br /> <br />
+          {AboutData.subheder3} <br /> <br />
+          {AboutData.subheder4}
+      </Content>
       </Container>
     </>
   )

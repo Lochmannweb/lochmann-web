@@ -34,7 +34,7 @@ const breakpoints = {
       marginTop: '162rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      marginTop: '170rem',
+      marginTop: '202rem',
     },
   });
 

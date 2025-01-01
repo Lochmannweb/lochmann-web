@@ -21,17 +21,9 @@ const Container = styled.div({
   display: 'flex', 
   justifyContent: 'space-between',
   padding: '1rem',
-  // backgroundColor: '#0a0a0a',
-  // position: 'fixed',
   width: '100%',
   zIndex: '50',
   bottom: '0',
-  // fontFamily: '"Keania One", sans-serif',
-  // borderTopColor: '#A100FF',
-  // borderBottomColor: '#0a0a0a',
-  // borderLeftColor: '#0a0a0a',
-  // borderRightColor: '#0a0a0a',
-  // borderWidth: 'thin',
   [`@media (min-width: ${breakpoints.md})`]: {
     borderTopColor: 'black',
     top: '0', 
@@ -39,7 +31,6 @@ const Container = styled.div({
     height: '6rem',
     alignItems: 'center',
     padding: '3rem',
-    // backgroundColor: '#0a0a0a',
   },
 });
 
@@ -50,7 +41,6 @@ const OpenMenu = styled.div({
   left: 0,
   bottom: 0,
   padding: '1rem',
-  // backgroundColor: '#0a0a0a', 
   width: '100%',
   paddingBottom: '15px',
   zIndex: 50,
@@ -59,7 +49,6 @@ const OpenMenu = styled.div({
     gap: '1rem',
     bottom: '',
     right: '16rem',
-    // backgroundColor: '#0a0a0a',
     width: '35%',
     height: '3.5rem',
     borderRadius: '50px',
@@ -74,7 +63,6 @@ const OpenMenu = styled.div({
     gap: '1rem',
     bottom: '',
     right: '19rem',
-    // backgroundColor: '#0a0a0a',
     width: '35%',
     height: '3.5rem',
     borderRadius: '50px',
@@ -91,7 +79,6 @@ const Links = styled.div({
   display: 'grid',
   paddingBottom: '20px',
   gap: '10px',
-  // fontFamily: '"Keania One", sans-serif',
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
     paddingTop: '1rem',
@@ -145,10 +132,10 @@ function App() {
             <LinksContainer>
                 <ul>
                   <Links>
-                    <a className='' href="/About" prefetch={false}>JOURNEY</a>
-                    <a className='' href="/About" prefetch={false}>SERVICES</a>
-                    <a className='' href="/MyWork" prefetch={false}>PROJECTS</a>
-                    <a className='' href="/Contact" prefetch={false}>CONTACT</a>
+                    <a className='hover:text-hover-menu' href="/About" prefetch={false}>JOURNEY</a>
+                    <a className='hover:text-hover-menu' href="/About" prefetch={false}>SERVICES</a>
+                    <a className='hover:text-hover-menu' href="/MyWork" prefetch={false}>PROJECTS</a>
+                    <a className='hover:text-hover-menu' href="/Contact" prefetch={false}>CONTACT</a>
                   </Links>
                 </ul>
             </LinksContainer>

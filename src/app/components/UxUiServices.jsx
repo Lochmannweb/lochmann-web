@@ -16,84 +16,45 @@ const breakpoints = {
 const Title = styled.div({
   fontSize: '30px',
   margin: 'auto',
-  fontFamily: '"Keania One", sans-serif',
-  borderBottomColor: '#A100FF',
-  borderWidth: 'thin',
-  textAlign: 'start',
-  borderRadius: '0px',
-  marginBottom: '1rem',
-  marginTop: '5rem',
-
-  // scroll animtion text
-  color: 'hsl(0 0% 100% / 0)',
-  backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
-  backgroundSize: '30% 100%',
-  backgroundRepeat: 'no-repeat',
-  animation: 'scroll-reveal linear forwards',
-  animationTimeline: 'view()',
-  backgroundClip: 'text',
+  display: 'contents',
+  transform: 'uppercase',
+  fontFamily: 'Emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
-    borderRadius: '0px 100px',
-    borderColor: '#A100FF',
-    textAlign: 'center',
     fontSize: '40px',
-    marginTop: '0rem',
-    width: '80%',
-   },
+  },
   [`@media (min-width: ${breakpoints.lg})`]: {
-   fontSize: '40px',
-   marginTop: '0rem',
-   width: '50%',
+    fontSize: '60px',
   },
 });
 
 const Container = styled.div({
   margin: 'auto',
-  // fontFamily: '"Keania One", sans-serif',
-    [`@media (min-width: ${breakpoints.md})`]: {
-      display: 'flex',
-      justifyContent: 'center',
-      marginTop: '3rem',
-      width: '80%',
-    },
-    [`@media (min-width: ${breakpoints.lg})`]: {
-      display: 'flex',
-      justifyContent: 'center',
-      marginTop: '3rem',
-      width: '50%',
-      borderRadius: '20px',
-      padding: '1rem',
-      gap: '2rem',
-    },
-});
-
-const ImageContainer = styled.div({
-  margin: '1rem',
   marginBottom: '3rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    width: '50%',
-    height: '30vh',
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '8rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    marginTop: '0rem',
+    marginBottom: '10rem',
+    gap: '10rem',
   },
 });
 
 const Content = styled.div({
+  fontSize: '15px',
+  color: 'gray',
   [`@media (min-width: ${breakpoints.md})`]: {
-    width: '50%',
-    marginTop: '0rem',
-    padding: '0rem',
+    width: '76%',
   },
-});
-
-const ContentTitle = styled.div({
-  fontSize: '30px',
-  [`@media (min-width: ${breakpoints.md})`]: {
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    width: '40%',
   },
 });
 
 const ContentSubheder = styled.div({
-  color: 'hsl(0 0% 100% / 0)',
-  backgroundImage: 'linear-gradient(90deg, gray, white)',
-  backgroundClip: 'text',
+  color: 'white',
   fontSize: '15px',
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '1rem',
@@ -106,23 +67,14 @@ const MyStory = () => {
 
   return (
     <>
-    <Title>{UXUIData.UXUI.title}</Title>
     <Container>
+      <Title>{UXUIData.UXUI.title}</Title>
       <Content>
-        <ContentSubheder>{UXUIData.UXUI.content}</ContentSubheder> 
-        <ContentSubheder>{UXUIData.UXUI.content2}</ContentSubheder> 
-        <ContentSubheder>{UXUIData.UXUI.content3}</ContentSubheder> 
-        <ContentSubheder>{UXUIData.UXUI.content4}</ContentSubheder> 
-        <ContentSubheder>{UXUIData.UXUI.content5}</ContentSubheder> 
-        {/* <li className='md:text-base'>{UXUIData.UXUI.services1}</li> */}
-        {/* <li className='md:text-base'>{UXUIData.UXUI.services2}</li> */}
-        <li className='md:text-base'>{UXUIData.UXUI.services3}</li>
-        <li className='md:text-base'>{UXUIData.UXUI.services4}</li>
-        <li className='md:text-base'>{UXUIData.UXUI.services5}</li>
+        {UXUIData.UXUI.content1} <br /> <br />
+        {UXUIData.UXUI.content2} <br /> <br />
+        {UXUIData.UXUI.content3} <br /> <br />
+        {UXUIData.UXUI.content4}
       </Content>
-      <ImageContainer>
-        <Image className='m-auto' src="/uxuidesign.png" alt="img" srcset="" width={300} height={300} />
-      </ImageContainer>
     </Container>
     </>
   )

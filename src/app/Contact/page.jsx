@@ -1,32 +1,85 @@
-'use client';
+"use client"
 
-import React from 'react';
-import Contact from '../components/Contact'
-import styled from '@emotion/styled'; 
-import "@fontsource/keania-one";
+import React from 'react'
+import styled from '@emotion/styled';
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
+import ContactFormular from '@/app/components/ContactFormular'
+import { HomePageContactFormular } from '@/app/data/ContactFormular'
 
 const breakpoints = {
-  md: '768px', 
-  lg: '1024px', 
-};
+    md: '768px', 
+    lg: '1024px', 
+  };
 
-const Container = styled.div({
-    display: 'grid',
-    margin: 'auto',
-    padding: '2rem',
-    [`@media (min-width: ${breakpoints.md})`]: {
-      position: 'unset',
+const IMG = styled.div({
+  width: '92%',
+  borderRadius: '15px',
+  borderColor: '#aaa',
+  borderWidth: 'thin',
+  justifySelf: 'center',
+  marginTop: '5rem',
+  // zIndex: '50',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    width: '95%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      top: '8rem',
-      width: '30%',
-      right: '23rem',
-      margin: 'unset',
-      position: 'absolute',
+      height: '70vh',
+      marginTop: '0rem',
+      },
+});
+
+const Container = styled.div({
+    justifySelf: 'center',
+    textAlign: 'center',
+    position: 'sticky',
+    // marginTop: '153rem',
+    // position: 'absolute',
+    [`@media (min-width: ${breakpoints.md})`]: {
+      // marginTop: '208rem',
+      width: '80%',
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      marginTop: '-36rem',
+      marginBottom: '6rem',
     },
   });
+  
+const Title = styled.div({
+  marginBottom: '1rem',
+  fontSize: '13px',
+  [`@media (min-width: ${breakpoints.md})`]: {
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    textAlign: 'start',
+    fontSize: '18px',
+  },
+});
+
+const ContentContainer = styled.div({
+    [`@media (min-width: ${breakpoints.md})`]: {
+      display: 'flex',
+      gap: '10rem',
+      marginTop: '4rem',
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      gap: '0rem',
+    },
+  });
+
+const Content = styled.div({
+  fontSize: '25px',
+  lineHeight: '1rem',
+  fontFamily: 'fantasy',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    textAlign: 'start',
+    fontSize: '40px',
+    lineHeight: '3rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '60px',
+  },
+});
 
 function ContactForm() {
     const theme = useTheme();
@@ -36,17 +89,26 @@ function ContactForm() {
   return (
     <>
     {(!isMobile && 
-      <img className="mt-56 -mb-52 md:-mb-28 md:-mt-7" src="/test-contact-dbg.png" alt="bg" width={2000} /> 
+    <IMG>
+      <img className="border-borderColor rounded-xl lg:h-full brightness-50" src="/header-contact-form-dbg.jpg" alt="bg" width={2000} /> 
+    </IMG>
     )}
 
     {(isTablet && 
-      <img src="/test-contact-mbg.png" alt="mobil" width={2000} /> 
+      <IMG>
+      <img className="rounded-2xl" src="/work-header-mbg.png" alt="mobil" width={1000} /> 
+      </IMG>
     )}
-      <Container>
-        <Contact />
-      </Container>
+
+    <Container>
+        <Title>{HomePageContactFormular.title}</Title>
+        <ContentContainer>
+            <Content>{HomePageContactFormular.header} <br /> <span className='text-lg md:text-3xl'>{HomePageContactFormular.subheader}</span></Content>
+            <ContactFormular />
+        </ContentContainer>
+    </Container>
     </>
-  );
+  )
 }
 
-export default ContactForm;
+export default ContactForm

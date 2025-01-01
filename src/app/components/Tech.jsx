@@ -1,6 +1,4 @@
-"use client"
-
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styled from '@emotion/styled';
 import { TechData } from '../data/TechData';
 import "@fontsource/keania-one";
@@ -8,9 +6,23 @@ import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 
 const breakpoints = {
-    md: '768px', 
-    lg: '1024px', 
-  };
+  md: '768px',
+  lg: '1024px',
+};
+
+// Keyframe for fading in from the right
+const fadeInFromRight = `
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+`;
 
 const IMG = styled.div({
   width: '92%',
@@ -21,10 +33,10 @@ const IMG = styled.div({
   marginTop: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
-    },
-    [`@media (min-width: ${breakpoints.lg})`]: {
-      height: '80vh',
-      },
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    height: '80vh',
+  },
 });
 
 const Container = styled.div({
@@ -32,12 +44,12 @@ const Container = styled.div({
   marginTop: '61rem',
   justifySelf: 'center',
   position: 'absolute',
-    [`@media (min-width: ${breakpoints.md})`]: {
-      marginTop: '97rem',
-      },
-      [`@media (min-width: ${breakpoints.lg})`]: {
-        marginTop: '103rem',
-        },
+  [`@media (min-width: ${breakpoints.md})`]: {
+    marginTop: '97rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    marginTop: '133rem',
+  },
 });
 
 const HeaderContent = styled.div({
@@ -49,7 +61,7 @@ const HeaderContent = styled.div({
     padding: '4rem',
     width: '60%',
   },
-})
+});
 
 const Title = styled.div({
   fontSize: '13px',
@@ -88,19 +100,20 @@ const Subheader = styled.div({
   color: 'gray',
   textTransform: 'uppercase',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '40px',
+    fontSize: '70px',
     color: 'white',
     fontFamily: 'Fantasy',
-    width: '54%',
+    textAlign: 'start',
+    width: '45%',
   },
-})
+});
 
 const Content = styled.div({
   display: 'grid',
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
   },
-})
+});
 
 const Expertise = styled.div({
   display: 'grid',
@@ -109,31 +122,82 @@ const Expertise = styled.div({
   margin: 'auto',
   [`@media (min-width: ${breakpoints.md})`]: {
     padding: '5rem',
-    marginTop: '-1rem',
+    marginTop: '1rem',
     display: 'grid',
-    // gap: '5rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     padding: '0rem',
-    // display: 'flex',
-    // gap: '5rem',
   },
-})
+});
 
-const ExpertiseContent = styled.div({
-  alignItems: 'center',
-  display: 'flex',
-  gap: '2rem',
-  [`@media (min-width: ${breakpoints.md})`]: {
-    display: 'flex',
-    gap: '1rem',
-  },
-})
+// Applying fade-in from the right with delay
+const ExpertiseContent = styled.div`
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  opacity: 0;
+  animation: fadeInRight 1s ease-out forwards; 
+
+  ${fadeInFromRight}
+
+  @media (min-width: ${breakpoints.md}) {
+    gap: 1rem;
+  }
+`;
+
+const ExpertiseContent1 = styled.div`
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  opacity: 0;
+  margin-left: -4rem;
+  animation: fadeInRight 1s ease-out forwards;
+  animation-delay: 1s; 
+
+  ${fadeInFromRight}
+
+  @media (min-width: ${breakpoints.md}) {
+    gap: 1rem;
+  }
+`;
+
+const ExpertiseContent2 = styled.div`
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  opacity: 0;
+  margin-left: -8rem;
+  animation: fadeInRight 1s ease-out forwards;
+  animation-delay: 2s; 
+
+  ${fadeInFromRight}
+
+  @media (min-width: ${breakpoints.md}) {
+    gap: 1rem;
+  }
+`;
+
+const ExpertiseContent3 = styled.div`
+  align-items: center;
+  display: flex;
+  gap: 2rem;
+  opacity: 0;
+  margin-left: -13rem;
+  animation: fadeInRight 1s ease-out forwards;
+  animation-delay: 3s; 
+
+  ${fadeInFromRight}
+
+  @media (min-width: ${breakpoints.md}) {
+    gap: 1rem;
+  }
+`;
 
 const ExpertiseContentText = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '30px',
   },
-})
+});
 
 const Button = styled.div({
   padding: '0.5rem',
@@ -163,8 +227,7 @@ const Button = styled.div({
     borderRadius: '25px',
     marginTop: '3rem',
     fontSize: '20px',
-    
-  }
+  },
 });
 
 function App() {
@@ -172,103 +235,80 @@ function App() {
   const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
   const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
+    // Using Intersection Observer to trigger the animation when it comes into view
+    const [isInView, setIsInView] = useState(false);
+    const expertiseRef = useRef(null);
+  
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        const entry = entries[0];
+        if (entry.isIntersecting) {
+          setIsInView(true); // Start the animation
+        }
+      }, {
+        threshold: 0, // Trigger when the element is 50% in the viewport
+      });
+  
+      if (expertiseRef.current) {
+        observer.observe(expertiseRef.current);
+      }
+  
+      return () => {
+        if (expertiseRef.current) {
+          observer.unobserve(expertiseRef.current);
+        }
+      };
+    }, []);
+
   return (
-    <> 
-    {(!isMobile && 
-      <IMG>
-        <img className="rounded-2xl lg:h-full brightness-50" src="/header-expertise-dbg.jpg" alt="mobil" width={2000} /> 
-      </IMG>
-    )}
-    {(isTablet && 
-      <IMG>
-        <img className="rounded-2xl" src="/tech-header-mbg.png" alt="mobil" /> 
-      </IMG>
-    )}
-    <Container>
-      <HeaderContent>
-        <Title>{TechData.title}</Title>
-        <Header>{TechData.header}</Header>
-      </HeaderContent>
+    <>
+      {(!isMobile && 
+        <IMG>
+          <img className="rounded-2xl lg:h-full brightness-50" src="/header-expertise-dbg.jpg" alt="mobil" width={2000} /> 
+        </IMG>
+      )}
+      {(isTablet && 
+        <IMG>
+          <img className="rounded-2xl" src="/tech-header-mbg.png" alt="mobil" /> 
+        </IMG>
+      )}
+      <Container>
+        <HeaderContent>
+          <Title>{TechData.title}</Title>
+          <Header>{TechData.header}</Header>
+        </HeaderContent>
 
-      <Content>
-      <Subheader>
-          <span>{TechData.subheader}</span>
-      </Subheader>
+        <Content>
+          <Subheader>
+            <span>{TechData.subheader}</span>
+          </Subheader>
 
-      <Expertise>
-        <ExpertiseContent>
-          <img src="/react-icon.svg" alt="svg" width={30} />
-          <ExpertiseContentText>{TechData.Kode.title}</ExpertiseContentText>
-        </ExpertiseContent>
+          <Expertise>
+            <ExpertiseContent ref={expertiseRef} className={isInView ? 'in-view' : ''}>
+              <img src="/react-icon.svg" alt="svg" width={60} />
+              <ExpertiseContentText>{TechData.Kode.title}</ExpertiseContentText>
+            </ExpertiseContent>
 
-        <ExpertiseContent>
-          <img src="/spline.png" alt="png" width={30}  />
-          <ExpertiseContentText>{TechData.Ani.title}</ExpertiseContentText>
-        </ExpertiseContent>
+            <ExpertiseContent1 ref={expertiseRef} className={isInView ? 'in-view' : ''}>
+              <img src="/spline.png" alt="png" width={60} />
+              <ExpertiseContentText>{TechData.Ani.title}</ExpertiseContentText>
+            </ExpertiseContent1>
 
-        <ExpertiseContent>
-          <img src="js-icon.svg" alt="svg" width={30} />
-          <ExpertiseContentText>{TechData.Js.title}</ExpertiseContentText>
-        </ExpertiseContent>
+            <ExpertiseContent2 ref={expertiseRef} className={isInView ? 'in-view' : ''}>
+              <img src="js-icon.svg" alt="svg" width={60} />
+              <ExpertiseContentText>{TechData.Js.title}</ExpertiseContentText>
+            </ExpertiseContent2>
 
-        <ExpertiseContent>
-          <img src="/tailwind-css.svg" alt="svg" width={35} />
-          <ExpertiseContentText>{TechData.TW.title}</ExpertiseContentText>
-        </ExpertiseContent>
-      </Expertise>
-      </Content>
-
-    </Container>
-    <Button><a href="/About">See More</a></Button>
+            <ExpertiseContent3 ref={expertiseRef} className={isInView ? 'in-view' : ''}>
+              <img src="/tailwind-css.svg" alt="svg" width={65} />
+              <ExpertiseContentText>{TechData.TW.title}</ExpertiseContentText>
+            </ExpertiseContent3>
+          </Expertise>
+        </Content>
+      </Container>
+      <Button><a href="/About">See More</a></Button>
     </>
   );
 }
 
 export default App;
-
-
-
-{/* <>
-{(!isMobile && 
-  <img className="border-borderColor brightness-50 border-2 m-auto rounded-xl md:mt-10" src="/work-header-dbg.jpg" alt="bg" width={2000} /> 
-)}
-
-{(isTablet && 
-  <IMG>
-  <img className="rounded-2xl" src="/work-header-mbg.png" alt="mobil" /> 
-  </IMG>
-)}
-
-
-<Container>
-  <HeaderContent>
-    <Title>{TechData.title}</Title>
-    <Subheader>
-      <span>{TechData.subheader}</span> <br />
-      <span>{TechData.subheader2}</span>
-    </Subheader>
-  </HeaderContent>
-  <Expertise>
-    <ExpertiseContent>
-      <img src="/react-icon.svg" alt="svg" width={60} />
-      <ExpertiseContentText>{TechData.Kode.title}</ExpertiseContentText>
-    </ExpertiseContent>
-
-    <ExpertiseContent>
-      <img src="/spline.png" alt="png" width={60}  />
-      <ExpertiseContentText>{TechData.Ani.title}</ExpertiseContentText>
-    </ExpertiseContent>
-
-    <ExpertiseContent>
-      <img src="js-icon.svg" alt="svg" width={50} />
-      <ExpertiseContentText>{TechData.Js.title}</ExpertiseContentText>
-    </ExpertiseContent>
-
-    <ExpertiseContent>
-      <img src="/tailwind-css.svg" alt="svg" width={60} />
-      <ExpertiseContentText>{TechData.TW.title}</ExpertiseContentText>
-    </ExpertiseContent>
-  </Expertise>
-</Container>
-<Button><a href="/About">See All Services</a></Button>
-</> */}

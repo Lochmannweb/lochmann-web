@@ -6,6 +6,9 @@ import { RecentWorkData } from '../data/MyWorkData';
 import "@fontsource/keania-one";
 import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
+import { useInView } from 'react-intersection-observer';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const breakpoints = {
     md: '768px', 
@@ -23,7 +26,7 @@ const IMG = styled.div({
     width: '95%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      height: '75vh',
+      height: '140vh',
       },
 });
 
@@ -33,10 +36,16 @@ const Container = styled.div({
   padding: '2rem',
   position: 'absolute',
   textAlign: 'center',
+  justifySelf: 'center',
+  '.pinned': {
+    position: 'sticky',
+    top: '5rem',
+    zIndex: '10',
+  },
     [`@media (min-width: ${breakpoints.md})`]: {
       margin: 'auto',
       padding: '2rem',
-      marginTop: '41rem',
+      marginTop: '35rem',
       },
 });
 
@@ -49,52 +58,34 @@ const HeaderContent = styled.div({
   },
 })
 
-const Title = styled.div({
-  fontSize: '13px',
-  marginBottom: '0rem',
+const ImageGrid = styled.div({
+  justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '20px',
+    marginBottom: '3rem',
+    marginTop: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '20px',
-    marginTop: '1rem',
   },
 });
 
-const Header = styled.div({
-  fontSize: '30px',
-  borderRadius: '0px',
-  marginBottom: '-0.5rem',
-  fontFamily: 'emoji',
-  textTransform: 'uppercase',
+const ImageBox = styled.div({
+  top: '50%',
+  left: '50%',
+  transform: 'trasnslate(0%, 0%)',
+  width: '350px',
+  height: '300px',
   [`@media (min-width: ${breakpoints.md})`]: {
-    borderRadius: '0px 100px',
-    textAlign: 'center',
-    borderColor: '#A100FF',
-    fontSize: '50px',
+    width: '1000px',
+    height: '300px',
+    marginBottom: '5rem',
   },
-  [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '60px',
+  [`@media (min-width: ${breakpoints.lg})`]: {
   },
 });
 
-const Content = styled.div({
-  fontSize: '13px',
-  borderRadius: '0px',
-  marginBottom: '3rem',
-  color: 'gray',
-  [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '23px',
-  },
-  [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '20px',
-    width: '70%',
-    justifySelf: 'center',
-  },
-});
-
-const ImageGrid = styled.div({
+const ImageScroll = styled.div({
   margin: 'auto',
+  position: 'relative',
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '3rem',
   },
@@ -131,11 +122,121 @@ const Button = styled.div({
   },
 });
 
+const fadeUp = `
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+`;
+
+const Title = styled.div({
+  fontSize: '13px',
+  marginBottom: '0rem',
+  opacity: ({ inView }) => (inView ? '1' : '0'),
+  animation: ({ inView }) =>
+    inView ? 'fadeUp 1s ease-in-out 0.2s forwards' : 'none',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '20px',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    marginTop: '1rem',
+  },
+  ...fadeUp
+});
+
+const Header = styled.div({
+  fontSize: '30px',
+  borderRadius: '0px',
+  marginBottom: '-0.5rem',
+  fontFamily: 'emoji',
+  textTransform: 'uppercase',
+  opacity: ({ inView }) => (inView ? '1' : '0'),
+  animation: ({ inView }) =>
+    inView ? 'fadeUp 1s ease-in-out 0.4s forwards' : 'none',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    borderRadius: '0px 100px',
+    textAlign: 'center',
+    borderColor: '#a100ff',
+    fontSize: '50px',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '60px',
+  },
+  ...fadeUp
+});
+
+const Content = styled.div({
+  fontSize: '13px',
+  borderRadius: '0px',
+  marginBottom: '3rem',
+  color: 'gray',
+  opacity: ({ inView }) => (inView ? '1' : '0'),
+  animation: ({ inView }) =>
+    inView ? 'fadeUp 1s ease-in-out 0.6s forwards' : 'none',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '23px',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '20px',
+    width: '70%',
+    justifySelf: 'center',
+  },
+  ...fadeUp
+});
+
 
 function LatestProjects() {
-    const theme = useTheme();
-    const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
-    const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const theme = useTheme();
+  const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+
+  const { ref: titleRef, inView: titleInView } = useInView({ triggerOnce: true });
+  const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
+  const { ref: contentRef, inView: contentInView } = useInView({ triggerOnce: true });
+
+  // gsap.registerPlugin(ScrollTrigger);
+
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const button = document.querySelector("Button");
+  //   const lastCard = document.querySelector("ImageScroll");
+  //   const pinnedSection = gsap.utils.toArray("ImageGrid");
+
+  //   pinnedSection.forEach((section, index, sections) => {
+  //     let img = section.querySelector("ImageBox");
+  //     let nextSection = sections[index + 1] || lastCard;
+  //     let endScalePoint = `top+=${section.offsetTop - section.offsetTop} top`;
+
+  //     gsap.to(section, {
+  //       scrollTrigger: {
+  //         trigger: section,
+  //         start: "top top",
+  //         end: index === sections.length 
+  //         ? `+=${lastCard.offsetHeight / 2}` 
+  //         : button.offsetTop - window.innerHeight,
+  //         pin: true,
+  //         pinSpacing: false,
+  //         scrub: 1,
+  //       }
+  //     });
+
+  //     gsap.fromTo(img, { scale: 1 }, {
+  //       scale: 0.5,
+  //       ease: "none",
+  //       scrollTrigger: {
+  //         trigger: section,
+  //         start: "top top",
+  //         end: endScalePoint,
+  //         scrub: 1,
+  //       }
+  //     });
+  //   });
+  // });
 
   return (
     <>
@@ -151,14 +252,20 @@ function LatestProjects() {
       </IMG>
     )}
     <Container>
-      <HeaderContent>
-        <Title>{RecentWorkData.title}</Title>
-        <Header>{RecentWorkData.header}</Header>
-        <Content>{RecentWorkData.content}</Content>
-      </HeaderContent>
+        <HeaderContent >
+          <Title ref={titleRef} inView={titleInView}>{RecentWorkData.title}</Title>
+          <Header ref={headerRef} inView={headerInView}>{RecentWorkData.header}</Header>
+          <Content ref={contentRef} inView={contentInView}>{RecentWorkData.content}</Content>
+        </HeaderContent>
       <ImageGrid>
-        <img src="/cgc-desktop.png" alt="png" width={1000} />
+        <ImageBox><img class="card pinned" src="/cgc-desktop.png" alt="png" width={1000} /></ImageBox>
       </ImageGrid>
+      <ImageGrid>
+        <ImageBox><img class="card pinned" src="/foofest-desktop.png" alt="png" width={1000} /></ImageBox>
+      </ImageGrid>
+      {/* <ImageScroll>
+        <ImageBox><img class="card scroll" src="/cgc-desktop.png" alt="png" width={1000} /></ImageBox>
+      </ImageScroll> */}
     </Container>
     <Button><a href="/MyWork" >{RecentWorkData.button}</a></Button> 
     </>

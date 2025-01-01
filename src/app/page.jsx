@@ -20,7 +20,7 @@ const Page = () => {
   return (
     <Container> 
       <Header/>
-      <Banner />
+      {/* <Banner /> */}
       <Projects/>
       <Tech/>
       <Feedback/>

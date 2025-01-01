@@ -19,8 +19,7 @@ const Container = styled.div({
     gap: '5rem',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    // padding: '2rem',
-    // fontSize: '20px',
+    marginTop: '2rem',
    },
 });
 

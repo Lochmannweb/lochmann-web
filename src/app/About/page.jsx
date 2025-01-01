@@ -9,33 +9,98 @@ import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 
 const breakpoints = {
-  md: '768px', 
+  sm: '699px',
+  md: '700px', 
   lg: '1024px',
 };
 
-const Container = styled.div({
-  marginTop: '-2rem',
-  padding: '2rem',
+const IMG = styled.div({
+  width: '90%',
+  borderRadius: '10px',
+  borderColor: '#6b6b6b',
+  borderWidth: 'thin',
+  justifySelf: 'center',
+  height: '177.5vh',
   [`@media (min-width: ${breakpoints.md})`]: {
-    marginTop: '0rem',
+    width: '95%',
+    // height: '100vh',
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      width: '95%',
+      // height: '140vh',
+      },
+});
+
+const Container = styled.div({
+  padding: '2rem',
+  top: '4rem',
+  position: 'absolute',
+  marginBottom: '5rem',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    marginTop: '-114rem',
+    marginBottom: '0rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    marginTop: '5rem',
+    marginBottom: '0rem',
+  },
+})
+
+const Title = styled.div({
+  transform: 'uppercase',
+  justifySelf: 'center',
+  fontFamily: 'Fantasy',
+  fontSize: '30px',
+  [`@media (min-width: ${breakpoints.md})`]: {
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '60px',
+    marginBottom: '5rem',
   },
 })
 
 const Aboutpage = () => {
     const theme = useTheme();
-    const isTablet = useMediaQuery(theme.breakpoints.down('md'));
-    const isMobile = useMediaQuery(theme.breakpoints.down('md'));
+    const isMobile = useMediaQuery(theme.breakpoints.down('sm')); 
+    const isTablet = useMediaQuery(theme.breakpoints.between('md')); 
+    const isDesktop = useMediaQuery(theme.breakpoints.up('lg'));
 
   return (
     <>
-    {(!isMobile && 
-      <img className="mt-56 -mb-52 md:mb-0 md:-mt-12" src="/test-journey-dbg.png" alt="bg" width={2000} /> 
-    )}
+      {isMobile && (
+        <IMG>
+          <img
+            className="rounded-xl lg:h-full brightness-50"
+            src="/test-journey-mbg.png"
+            alt="bg"
+            width={2000}
+          />
+        </IMG>
+      )}
+      
+      {isTablet && (
+        <IMG>
+          <img
+            className="rounded-xl lg:h-full brightness-50"
+            src="/journey-mbg.png"
+            alt="bg"
+            width={2000}
+          />
+        </IMG>
+      )}
 
-    {(isTablet && 
-      <img src="/test-journey-mbg.png" alt="mobil" width={2000} /> 
-    )}
+      {isDesktop && (
+        <IMG>
+          <img
+            className="rounded-xl lg:h-full brightness-50"
+            src="/header-work-dbg.jpg"
+            alt="bg"
+            width={2000}
+          />
+        </IMG>
+      )}
       <Container>
+          <Title>MY JOURNEY</Title>
           <MyStory />
           <UxUiServices />
           <CodeServices />
