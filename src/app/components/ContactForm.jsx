@@ -11,38 +11,41 @@ const breakpoints = {
   };
 
 const IMG = styled.div({
-  width: '92%',
-  borderRadius: '15px',
-  borderColor: 'borderColor',
-  borderWidth: 'thin',
-  justifySelf: 'center',
+  width: '95%',
   marginTop: '5rem',
+  borderRadius: '10px',
+  borderColor: '#6b6b6b',
+  borderWidth: 'thin',
+  backgroundImage: `url('/header-contact-form-dbg.jpg')`,
+  backgroundSize: 'cover',
+  justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      height: '80vh',
-      marginTop: '15rem',
+      width: '95%',
+      height: '70vh',
       },
 });
 
 const Container = styled.div({
     justifySelf: 'center',
     textAlign: 'center',
-    marginTop: '153rem',
-    position: 'absolute',
+    // marginTop: '153rem',
+    // position: 'absolute',
     [`@media (min-width: ${breakpoints.md})`]: {
-      marginTop: '208rem',
+      // marginTop: '208rem',
       width: '80%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      marginTop: '263rem',
+      // marginTop: '263rem',
     },
   });
   
 const Title = styled.div({
   marginBottom: '1rem',
   fontSize: '13px',
+  marginTop: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -83,7 +86,7 @@ function ContactForm() {
 
   return (
     <>
-    {(!isMobile && 
+    {/* {(!isMobile && 
     <IMG>
       <img className="border-borderColor rounded-xl lg:h-full brightness-50" src="/header-contact-form-dbg.jpg" alt="bg" width={2000} /> 
     </IMG>
@@ -93,15 +96,17 @@ function ContactForm() {
       <IMG>
       <img className="rounded-2xl" src="/work-header-mbg.png" alt="mobil" width={1000} /> 
       </IMG>
-    )}
+    )} */}
 
-    <Container>
-        <Title>{HomePageContactFormular.title}</Title>
-        <ContentContainer>
-            <Content>{HomePageContactFormular.header} <br /> <span className='text-lg md:text-3xl'>{HomePageContactFormular.subheader}</span></Content>
-            <ContactFormular />
-        </ContentContainer>
-    </Container>
+    <IMG>
+      <Container>
+          <Title>{HomePageContactFormular.title}</Title>
+          <ContentContainer>
+              <Content>{HomePageContactFormular.header} <br /> <span className='text-lg md:text-3xl'>{HomePageContactFormular.subheader}</span></Content>
+              <ContactFormular />
+          </ContentContainer>
+      </Container>
+    </IMG>
     </>
   )
 }

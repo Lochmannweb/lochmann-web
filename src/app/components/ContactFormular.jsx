@@ -18,7 +18,7 @@ function ContactForm() {
           id="text"
           type="text" 
           name="text"
-          className='bg-input border-2 border-bordercolor rounded-lg text-white text-xs p-2 w-96 '
+          className='bg-input border-2 border-bordercolor rounded-lg text-white text-xs p-2 md:w-96 '
           placeholder='If the website exist'
         />
         <ValidationError 
@@ -99,7 +99,7 @@ function ContactForm() {
       </div>
 
       <div className='flex justify-end'>
-        <button type="submit" className=' bg-white font-bold hover:bg-gray hover:text-white text-black w-20 rounded-lg' disabled={state.submitting}>
+        <button type="submit" className=' bg-white font-bold hover:bg-gray hover:text-white text-black w-20 rounded-lg mb-4' disabled={state.submitting}>
           Send
         </button>
       </div>

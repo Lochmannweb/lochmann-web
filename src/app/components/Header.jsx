@@ -26,10 +26,12 @@ const fadeUp = `
 `;
 
 const IMG = styled.div({
-  width: '90%',
+  width: '95%',
   borderRadius: '10px',
   borderColor: '#6b6b6b',
   borderWidth: 'thin',
+  backgroundImage: `url('/header-dbg.jpg')`,
+  backgroundSize: 'cover',
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
@@ -54,13 +56,12 @@ const Container = styled.div({
 });
 
 const HeaderTitle = styled.div({
-  fontSize: '35px',
+  fontSize: '30px',
   textAlign: 'center',
   marginBottom: '0.5rem',
   lineHeight: '2rem',
   fontFamily: 'Fantasy',
   textTransform: 'uppercase',
-
   // Animation
   opacity: '0',
   animation: 'fadeUp 1s ease-in-out forwards',
@@ -195,13 +196,14 @@ const Content3 = styled.div`
 
 const Button = styled.div({
   color: 'black',
-  fontSize: '15px',
-  fontFamily: 'Fantasy',
+  fontSize: '13px',
   textAlign: 'center',
   marginTop: '2rem',
+  marginBottom: '2rem',
   background: 'white',
   borderRadius: '25px',
   justifySelf: 'center',
+  width: '40%',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '20px',
     width: '20%',
@@ -217,18 +219,8 @@ export default function Header() {
 
   return (
     <>
-    {(!isMobile && 
-      <IMG>
-        <img className="rounded-xl lg:h-full brightness-50" src="/header-dbg.jpg" alt="bg" width={2000} /> 
-      </IMG>
-    )}
-
-    {(isTablet && 
-      <IMG>
-        <img className="rounded-xl" src="/test-header.png" alt="mobil" /> 
-      </IMG>
-    )}
-      <Container className="absolute">
+    <IMG>
+      <Container>
           <HeaderTitle>{ForsideData.subheader}</HeaderTitle>
           <Subheader>{ForsideData.subheader2}</Subheader>
           <ContentContainer>
@@ -237,10 +229,9 @@ export default function Header() {
             <Content3>{ForsideData.content3}</Content3>
           </ContentContainer>
           <Banner />
-          <Button>
-          <a  href="/Contact">GET IN TOUCH</a>
-          </Button>
+          <Button><a  href="/Contact">GET IN TOUCH</a></Button>
       </Container>
+    </IMG>
     </>
   );
 }

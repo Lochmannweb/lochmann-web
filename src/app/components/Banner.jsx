@@ -14,6 +14,7 @@ const Container = styled.div({
   margin: 'auto',
   textAlign: 'center',
   lineHeight: '2rem',
+  marginTop: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     padding: '2rem',
     gap: '5rem',

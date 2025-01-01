@@ -11,30 +11,29 @@ const breakpoints = {
   };
 
   const IMG = styled.div({
-    width: '92%',
-    borderRadius: '15px',
+    width: '95%',
+    borderRadius: '10px',
     borderColor: '#6b6b6b',
     borderWidth: 'thin',
+    backgroundImage: `url(' /header-feedback-dbg.jpg')`,
     justifySelf: 'center',
+    backgroundSize: 'cover',
     marginTop: '5rem',
     [`@media (min-width: ${breakpoints.md})`]: {
       width: '95%',
       },
       [`@media (min-width: ${breakpoints.lg})`]: {
-        height: '72vh',
+        width: '95%',
+        height: '70vh',
         },
   });
 
   const Container = styled.div({
     justifySelf: 'center',
     textAlign: 'center',
-    marginTop: '94rem',
-    position: 'absolute',
     [`@media (min-width: ${breakpoints.md})`]: {
-      marginTop: '162rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      marginTop: '202rem',
     },
   });
 
@@ -88,7 +87,8 @@ const breakpoints = {
     color: 'white',
     display: 'grid',
     gap: '1.2rem',
-    marginTop: '-1rem',
+    marginTop: '0rem',
+    marginBottom: '1rem',
     [`@media (min-width: ${breakpoints.md})`]: {
       display: 'flex',
       gap: '1rem',
@@ -106,6 +106,10 @@ const breakpoints = {
     borderColor: '#6b6b6b',
     borderWidth: 'thin',
     borderRadius: '15px',
+    backgroundImage: `url('/header-feedback-dbg.jpg')`,
+    backgroundSize: 'cover',
+    width: '90%',
+    justifySelf: 'center',
     [`@media (min-width: ${breakpoints.md})`]: {
     },
   });
@@ -136,7 +140,7 @@ function Feedback() {
 
   return (
     <>
-    {(!isMobile && 
+    {/* {(!isMobile && 
       <IMG>
         <img className="rounded-xl lg:h-full brightness-50" src="/header-feedback-dbg.jpg" alt="bg" width={2000} /> 
       </IMG>
@@ -146,7 +150,8 @@ function Feedback() {
       <IMG>
         <img className="rounded-2xl" src="/feedback-header-mbg.png" alt="mobil" width={1000} /> 
       </IMG>
-    )}
+    )} */}
+    <IMG>
       <Container>
         <div>
           <Title>{FeedbackData.Title}</Title>
@@ -155,33 +160,31 @@ function Feedback() {
         </div>
         <Content>
           <FeedBackContainer>
-            <img className="rounded-xl m-auto md:h-96" width={300} height={100} src="/header-feedback-dbg.jpg" alt="mobil" /> 
-            <div className='absolute p-5 mt-5 md:w-2/6 lg:w-1/4'>
-              <img className='m-auto md:m-0 mb-5' src="/settings.svg" alt="svg" width={60} />
+            <div className='p-5 mt-5 md:w-2/6 lg:w-1/4'>
+              <img className='md:m-0 mb-5' src="/settings.svg" alt="svg" width={60} />
               <FeedBackContentTtitle className=' md:text-xl md:mt-5'>{FeedbackData.Tech.title}</FeedBackContentTtitle> 
               <FeedbackContent>{FeedbackData.Tech.feedback}</FeedbackContent>
             </div>
           </FeedBackContainer>
 
           <FeedBackContainer>
-            <img className="rounded-xl md:h-96" width={300} height={100} src="/header-feedback-dbg.jpg" alt="mobil" /> 
-            <div className='absolute p-5 mt-5 md:w-2/6 lg:w-1/4'>
-              <img className='m-auto md:m-0' src="/chat_1.svg" alt="svg" width={60} />
+            <div className='p-5 mt-5 md:w-2/6 lg:w-1/4'>
+              <img className='md:m-0' src="/chat_1.svg" alt="svg" width={60} />
               <FeedBackContentTtitle className=' md:text-xl md:mt-5'>{FeedbackData.Feedback.title}</FeedBackContentTtitle>
               <FeedbackContent>{FeedbackData.Feedback.feedback}</FeedbackContent>
             </div>
           </FeedBackContainer>
 
           <FeedBackContainer>
-            <img className="rounded-xl md:h-96" width={300} height={100} src="/header-feedback-dbg.jpg" alt="mobil" /> 
-            <div className='absolute p-5 mt-5 md:w-2/6 lg:w-1/4'>
-              <img className='m-auto md:m-0' src="/lowest-price.svg" alt="svg" width={60} />
+            <div className='p-5 mt-5 md:w-2/6 lg:w-1/4'>
+              <img className='md:m-0' src="/lowest-price.svg" alt="svg" width={60} />
               <FeedBackContentTtitle className=' md:text-xl md:mt-5'>{FeedbackData.Offer.title}</FeedBackContentTtitle>
               <FeedbackContent>{FeedbackData.Offer.feedback}</FeedbackContent>
             </div>
           </FeedBackContainer>
         </Content>
       </Container>
+    </IMG>
     </>
   )
 }

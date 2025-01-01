@@ -101,8 +101,8 @@ const LinksContainer = styled.div({
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
   const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
+  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);

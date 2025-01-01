@@ -17,40 +17,38 @@ const breakpoints = {
 
 const IMG = styled.div({
   width: '95%',
-  borderRadius: '15px',
+  marginTop: '5rem', 
+  borderRadius: '10px',
   borderColor: '#6b6b6b',
   borderWidth: 'thin',
+  backgroundImage: `url('/header-work-dbg.jpg')`,
+  backgroundSize: 'cover',
   justifySelf: 'center',
-  marginTop: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      height: '140vh',
+      width: '95%',
+      height: '70vh',
       },
 });
 
 const Container = styled.div({
   display: 'grid',
-  marginTop: '9rem',
-  padding: '2rem',
-  position: 'absolute',
+  // marginTop: '9rem',
+  // padding: '2rem',
+  // position: 'absolute',
   textAlign: 'center',
   justifySelf: 'center',
-  '.pinned': {
-    position: 'sticky',
-    top: '5rem',
-    zIndex: '10',
-  },
     [`@media (min-width: ${breakpoints.md})`]: {
       margin: 'auto',
       padding: '2rem',
-      marginTop: '35rem',
+      // marginTop: '35rem',
       },
 });
 
 const HeaderContent = styled.div({
-  marginTop: '9rem',
+  marginTop: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     alignContent: 'center',
   },
@@ -60,20 +58,21 @@ const HeaderContent = styled.div({
 
 const ImageGrid = styled.div({
   justifySelf: 'center',
+  marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    marginBottom: '3rem',
-    marginTop: '3rem',
+    // marginBottom: '3rem',
+    // marginTop: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },
 });
 
 const ImageBox = styled.div({
-  top: '50%',
-  left: '50%',
+  // top: '20%',
+  // left: '50%',
   transform: 'trasnslate(0%, 0%)',
-  width: '350px',
-  height: '300px',
+  width: '300px',
+  // height: '300px',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '1000px',
     height: '300px',
@@ -174,7 +173,7 @@ const Header = styled.div({
 const Content = styled.div({
   fontSize: '13px',
   borderRadius: '0px',
-  marginBottom: '3rem',
+  marginBottom: '1rem',
   color: 'gray',
   opacity: ({ inView }) => (inView ? '1' : '0'),
   animation: ({ inView }) =>
@@ -193,8 +192,8 @@ const Content = styled.div({
 
 function LatestProjects() {
   const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  // const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
+  // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { ref: titleRef, inView: titleInView } = useInView({ triggerOnce: true });
   const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
@@ -240,7 +239,7 @@ function LatestProjects() {
 
   return (
     <>
-    {(!isMobile && 
+    {/* {(!isMobile && 
     <IMG>
       <img className="border-borderColor rounded-xl lg:h-full brightness-50" src="/header-work-dbg.jpg" alt="bg" width={2000} /> 
     </IMG>
@@ -250,23 +249,22 @@ function LatestProjects() {
       <IMG>
       <img className="rounded-2xl" src="/recent-header-mbg.png" alt="mobil" /> 
       </IMG>
-    )}
-    <Container>
-        <HeaderContent >
-          <Title ref={titleRef} inView={titleInView}>{RecentWorkData.title}</Title>
-          <Header ref={headerRef} inView={headerInView}>{RecentWorkData.header}</Header>
-          <Content ref={contentRef} inView={contentInView}>{RecentWorkData.content}</Content>
-        </HeaderContent>
-      <ImageGrid>
-        <ImageBox><img class="card pinned" src="/cgc-desktop.png" alt="png" width={1000} /></ImageBox>
-      </ImageGrid>
-      <ImageGrid>
-        <ImageBox><img class="card pinned" src="/foofest-desktop.png" alt="png" width={1000} /></ImageBox>
-      </ImageGrid>
-      {/* <ImageScroll>
-        <ImageBox><img class="card scroll" src="/cgc-desktop.png" alt="png" width={1000} /></ImageBox>
-      </ImageScroll> */}
-    </Container>
+    )} */}
+    <IMG>
+      <Container>
+          <HeaderContent >
+            <Title ref={titleRef} inView={titleInView}>{RecentWorkData.title}</Title>
+            <Header ref={headerRef} inView={headerInView}>{RecentWorkData.header}</Header>
+            <Content ref={contentRef} inView={contentInView}>{RecentWorkData.content}</Content>
+          </HeaderContent>
+        <ImageGrid>
+          <ImageBox><img class="card pinned" src="/cgc-desktop.png" alt="png" width={1000} /></ImageBox>
+        </ImageGrid>
+        <ImageGrid>
+          <ImageBox><img class="card pinned" src="/foofest-desktop.png" alt="png" width={1000} /></ImageBox>
+        </ImageGrid>
+      </Container>
+      </IMG>
     <Button><a href="/MyWork" >{RecentWorkData.button}</a></Button> 
     </>
   );

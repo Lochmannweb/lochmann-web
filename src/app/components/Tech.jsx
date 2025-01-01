@@ -25,30 +25,30 @@ const fadeInFromRight = `
 `;
 
 const IMG = styled.div({
-  width: '92%',
-  borderRadius: '15px',
+  width: '95%',
+  borderRadius: '10px',
   borderColor: '#6b6b6b',
   borderWidth: 'thin',
+  backgroundImage: `url('/header-expertise-dbg.jpg')`,
+  backgroundSize: 'cover',
   justifySelf: 'center',
   marginTop: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-    height: '80vh',
-  },
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      width: '95%',
+      height: '70vh',
+      },
 });
 
 const Container = styled.div({
   display: 'grid',
-  marginTop: '61rem',
+  marginTop: '1rem',
   justifySelf: 'center',
-  position: 'absolute',
   [`@media (min-width: ${breakpoints.md})`]: {
-    marginTop: '97rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    marginTop: '133rem',
   },
 });
 
@@ -96,9 +96,11 @@ const Header = styled.div({
 
 const Subheader = styled.div({
   textAlign: 'center',  
-  fontSize: '15px',
-  color: 'gray',
+  fontSize: '30px',
+  color: 'white',
   textTransform: 'uppercase',
+  fontFamily: 'fantasy',
+  marginTop: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '70px',
     color: 'white',
@@ -145,53 +147,54 @@ const ExpertiseContent = styled.div`
   }
 `;
 
-const ExpertiseContent1 = styled.div`
-  align-items: center;
-  display: flex;
-  gap: 2rem;
-  opacity: 0;
-  margin-left: -4rem;
-  animation: fadeInRight 1s ease-out forwards;
-  animation-delay: 1s; 
-
-  ${fadeInFromRight}
-
-  @media (min-width: ${breakpoints.md}) {
-    gap: 1rem;
+const ExpertiseContent1 = styled.div({
+  alignItems: 'center',
+  display: 'flex',
+  gap: '2rem',
+  opacity: '0',
+  marginLeft: '0rem',
+  animation: 'fadeInRight 1s ease-out forwards',
+  animationDelay: '1s', 
+  ...fadeInFromRight,
+  [`@media (min-width: ${breakpoints.md})`]: {
+    gap: '1rem',
+    marginLeft: '-4rem',
   }
-`;
+});
 
-const ExpertiseContent2 = styled.div`
-  align-items: center;
-  display: flex;
-  gap: 2rem;
-  opacity: 0;
-  margin-left: -8rem;
-  animation: fadeInRight 1s ease-out forwards;
-  animation-delay: 2s; 
+const ExpertiseContent2 = styled.div({
+  alignItems: 'center',
+  display: 'flex',
+  gap: '2rem',
+  opacity: '0',
+  marginLeft: '0rem',
+  animation: 'fadeInRight 1s ease-out forwards',
+  animationDelay: '2s', 
 
-  ${fadeInFromRight}
+  ...fadeInFromRight,
 
-  @media (min-width: ${breakpoints.md}) {
-    gap: 1rem;
+  [`@media (min-width: ${breakpoints.md})`]: {
+    marginLeft: '-8rem',
+    gap: '1rem',
   }
-`;
+});
 
-const ExpertiseContent3 = styled.div`
-  align-items: center;
-  display: flex;
-  gap: 2rem;
-  opacity: 0;
-  margin-left: -13rem;
-  animation: fadeInRight 1s ease-out forwards;
-  animation-delay: 3s; 
+const ExpertiseContent3 = styled.div({
+  alignItems: 'center',
+  display: 'flex',
+  gap: '2rem',
+  opacity: '0',
+  marginLeft: '0rem',
+  animation: 'fadeInRight 1s ease-out forwards',
+  animationDelay: '3s', 
 
-  ${fadeInFromRight}
+  ...fadeInFromRight,
 
-  @media (min-width: ${breakpoints.md}) {
-    gap: 1rem;
+  [`@media (min-width: ${breakpoints.md})`]: {
+    marginLeft: '-13rem',
+    gap: '1rem',
   }
-`;
+});
 
 const ExpertiseContentText = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
@@ -262,7 +265,7 @@ function App() {
 
   return (
     <>
-      {(!isMobile && 
+      {/* {(!isMobile && 
         <IMG>
           <img className="rounded-2xl lg:h-full brightness-50" src="/header-expertise-dbg.jpg" alt="mobil" width={2000} /> 
         </IMG>
@@ -271,7 +274,8 @@ function App() {
         <IMG>
           <img className="rounded-2xl" src="/tech-header-mbg.png" alt="mobil" /> 
         </IMG>
-      )}
+      )} */}
+    <IMG>
       <Container>
         <HeaderContent>
           <Title>{TechData.title}</Title>
@@ -306,6 +310,7 @@ function App() {
           </Expertise>
         </Content>
       </Container>
+      </IMG>
       <Button><a href="/About">See More</a></Button>
     </>
   );
