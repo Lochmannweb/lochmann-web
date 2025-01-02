@@ -22,8 +22,10 @@ const Container = styled.div({
   justifyContent: 'space-between',
   padding: '1rem',
   width: '100%',
+  top: '0',
+  position: 'fixed',
+  backgroundColor: '#080505',
   zIndex: '50',
-  bottom: '0',
   [`@media (min-width: ${breakpoints.md})`]: {
     borderTopColor: 'black',
     top: '0', 
@@ -39,11 +41,12 @@ const OpenMenu = styled.div({
   transition: 'transform 0.3s ease',
   position: 'fixed',
   left: 0,
-  bottom: 0,
+  marginTop: '-3.5rem',
   padding: '1rem',
   width: '100%',
   paddingBottom: '15px',
-  zIndex: 50,
+  backgroundColor: 'black',
+  zIndex: '50',
   [`@media (min-width: ${breakpoints.md})`]: {
     top: '0',
     gap: '1rem',
@@ -83,7 +86,7 @@ const Links = styled.div({
     display: 'flex',
     paddingTop: '1rem',
     gap: '30px',
-    alignItems: 'center',
+    // alignItems: 'center',
   },
 });
 
@@ -94,7 +97,9 @@ const OpenMenuLogoAndIcon = styled.div({
 
 const LinksContainer = styled.div({
   display: 'flex',
-  justifyContent: 'space-between',
+  // justifySelf: 'center',
+  // textAlign: 'center',
+  // marginTop: '2rem',
 });
 
 
@@ -133,8 +138,8 @@ function App() {
                 <ul>
                   <Links>
                     <a className='hover:text-hover-menu' href="/About" prefetch={false}>JOURNEY</a>
-                    <a className='hover:text-hover-menu' href="/About" prefetch={false}>SERVICES</a>
-                    <a className='hover:text-hover-menu' href="/MyWork" prefetch={false}>PROJECTS</a>
+                    <a className='hover:text-hover-menu' href="/Services" prefetch={false}>SERVICES</a>
+                    <a className='hover:text-hover-menu' href="/MyWork" prefetch={false}>PROCESS TO PROJECT</a>
                     <a className='hover:text-hover-menu' href="/Contact" prefetch={false}>CONTACT</a>
                   </Links>
                 </ul>
@@ -176,17 +181,6 @@ function App() {
       {/* Open Menu */}
       {menuOpen && (
         <OpenMenu menuOpen={menuOpen}>
-            <LinksContainer>
-                <ul>
-                  <Links>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/About" prefetch={false}>Journey & Services</a>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/MyWork" prefetch={false}>Proces & projects</a>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/Contact" prefetch={false}>Contact</a>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="https://www.instagram.com/lochmannweb" prefetch={false}>Instagram</a>
-                  </Links>
-                </ul>
-            </LinksContainer>
-
             <OpenMenuLogoAndIcon>
             <div className='flex gap-2 items-center'>
               {(
@@ -215,6 +209,17 @@ function App() {
                   </svg>
                 </div>
             </OpenMenuLogoAndIcon>
+            <LinksContainer>
+                <ul>
+                  <Links>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/About" prefetch={false}>Journey</a>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/Services" prefetch={false}>Services</a>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/MyWork" prefetch={false}>Process To Project</a>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/Contact" prefetch={false}>Contact</a>
+                    <a className='text-lg md:text-lg hover:text-hover-menu' href="https://www.instagram.com/lochmannweb" prefetch={false}>Instagram</a>
+                  </Links>
+                </ul>
+            </LinksContainer>
         </OpenMenu>
       )}
     </>

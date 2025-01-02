@@ -2,13 +2,12 @@ import React from "react";
 import { ForsideData } from "../data/ForsideData";
 import styled from '@emotion/styled';
 import "@fontsource/keania-one";
-import { useTheme } from '@mui/material/styles';
-import { useMediaQuery } from '@mui/material';
 import Banner from '@/app/components/Banner'
 
 const breakpoints = {
-  md: '768px', 
-  lg: '1024px', 
+  sm: '699px',
+  md: '700px', 
+  lg: '1024px',
 };
 
 // Keyframes for fade-up animation
@@ -31,14 +30,17 @@ const IMG = styled.div({
   borderColor: '#6b6b6b',
   borderWidth: 'thin',
   backgroundImage: `url('/header-dbg.jpg')`,
+  // backgroundColor: '#000000d4',
   backgroundSize: 'cover',
   justifySelf: 'center',
+  marginTop: '4rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '95%',
       height: '70vh',
+      marginTop: '6rem',
       },
 });
 
@@ -49,9 +51,10 @@ const Container = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     justifySelf: 'center',
     textAlign: 'center',
-    marginTop: '7rem',
+    marginTop: '2.5rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
+    marginTop: '5rem',
   },
 });
 
@@ -60,54 +63,54 @@ const HeaderTitle = styled.div({
   textAlign: 'center',
   marginBottom: '0.5rem',
   lineHeight: '2rem',
-  fontFamily: 'Fantasy',
-  textTransform: 'uppercase',
   // Animation
   opacity: '0',
   animation: 'fadeUp 1s ease-in-out forwards',
   ...fadeUp,
 
-  '@media (min-width: 768px)': { // Using breakpoints.md
-    fontSize: '80px',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '60px',
     lineHeight: '5.5rem',
     marginTop: '-2rem',
   },
 
-  '@media (min-width: 1024px)': { // Using breakpoints.lg
+  [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '100px',
     lineHeight: '3rem',
     marginTop: '2rem',
+    fontFamily: 'Fantasy',
+    textTransform: 'uppercase',
   },
 });
 
 
-const Subheader = styled.div`
-  font-size: 35px;
-  text-align: center;
-  margin-bottom: 0.5rem;
-  line-height: 2rem;
-  font-family: Fantasy;
-  text-transform: uppercase;
+const Subheader = styled.div({
+  fontSize: '30px',
+  textAlign: 'center',
+  marginBottom: '0.5rem',
+  lineHeight: '2rem',
 
   // Animation
-  opacity: 0; 
-  animation: fadeUp 1s ease-in-out forwards;
-  animation-delay: 1s;
-  ${fadeUp}
+  opacity: '0', 
+  animation: 'fadeUp 1s ease-in-out forwards',
+  animationDelay: '1s',
+  ...fadeUp,
 
-  @media (min-width: ${breakpoints.md}) {
-    font-size: 80px;
-    line-height: 5.5rem;
-    margin-top: -2rem;
-  }
+  [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '60px',
+    lineHeight: '5.5rem',
+    marginTop: '-2rem',
+  },
 
-  @media (min-width: ${breakpoints.lg}) {
-    font-size: 100px;
-    line-height: 3rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '100px',
+    lineHeight: '3rem',
+    marginTop: '2rem',
+    marginBottom: '2rem',
+    fontFamily: 'Fantasy',
+    textTransform: 'uppercase',
   }
-`;
+});
 
 
 const ContentContainer = styled.div({
@@ -130,7 +133,7 @@ const Content1 = styled.div`
   @media (min-width: ${breakpoints.md}) {
     margin: auto;
     line-height: 0.8rem;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   @media (min-width: ${breakpoints.lg}) {
@@ -156,7 +159,7 @@ const Content2 = styled.div`
   @media (min-width: ${breakpoints.md}) {
     margin: auto;
     line-height: 0.8rem;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   @media (min-width: ${breakpoints.lg}) {
@@ -182,7 +185,7 @@ const Content3 = styled.div`
   @media (min-width: ${breakpoints.md}) {
     margin: auto;
     line-height: 0.8rem;
-    font-size: 25px;
+    font-size: 20px;
   }
 
   @media (min-width: ${breakpoints.lg}) {
@@ -205,17 +208,16 @@ const Button = styled.div({
   justifySelf: 'center',
   width: '40%',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '20px',
-    width: '20%',
+    fontSize: '18px',
+    width: '30%',
+    marginTop: '0rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
+      marginTop: '3rem',
       },
 });
 
 export default function Header() {
-  const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   return (
     <>

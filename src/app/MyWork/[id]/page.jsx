@@ -7,68 +7,111 @@ import { useTheme } from '@mui/material/styles';
 import { useMediaQuery } from '@mui/material';
 
 const breakpoints = {
-  md: '768px', 
-  lg: '1024px', 
+  sm: '699px',
+  md: '700px', 
+  lg: '1024px',
 };
 
+const IMG = styled.div({
+  width: '95%',
+  borderRadius: '10px',
+  borderColor: '#6b6b6b',
+  borderWidth: 'thin',
+  backgroundImage: `url('/header-dbg.jpg')`,
+  backgroundSize: 'cover',
+  justifySelf: 'center',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    width: '95%',
+    // height: '230vh',
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      width: '95%',
+      // height: '10vh',
+      },
+});
+
 const Container = styled.div({
+  display: 'grid',
+  padding: '1rem',
+  gap: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },
 });
 
-const HeaderImage = styled.div({
+const ContentBox = styled.div({
+  display: 'grid',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    gridTemplateColumns: '1fr 1fr',
+    width: '90%',
+    justifySelf: 'center',
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+    },
+});
+
+const ContentContainer = styled.div({
+  display: 'grid',
+  gap: '1rem',  
+  [`@media (min-width: ${breakpoints.md})`]: {
+    gridTemplateColumns: '1fr 1fr',
+    width: '90%',
+    justifySelf: 'center', 
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      },
+});
+
+const Title = styled.div({
+  transform: 'uppercase',
+  textAlign: 'center',
+  fontFamily: 'fantasy',
+  fontSize: '30px',
+  marginTop: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '80px',
   },
 });
 
 const Content = styled.div({
+  [`@media (min-width: ${breakpoints.md})`]: {
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+  },
+});
+
+const ContentTitle = styled.div({
+  fontSize: '25px',
+  fontWeight: 'bold',
+  [`@media (min-width: ${breakpoints.md})`]: {
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '40px',
+  },
+});
+
+const Box = styled.div({
   display: 'grid',
-  padding: '2rem',
-  gap: '0rem',
-  [`@media (min-width: ${breakpoints.md})`]: {
-    marginTop: '-8rem',
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-    width: '50%',
-    margin: 'auto',
-  },
-});
-
-const Load = styled.div({
+  gap: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },
 });
 
-const ContentData = styled.div({
+const ContentBoxTitle = styled.div({
+  fontWeight: 'bold',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },
 });
 
-const ContentDataTitle = styled.div({
-  fontSize: '20px',
-  fontFamily: '"Keania One", sans-serif',
-  [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '30px',
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '35px',
-  },
-});
-
-const ContentDataDesc = styled.div({
-  fontSize: '15px',
-  color: 'hsl(0 0% 100% / 0)',
-  backgroundImage: 'linear-gradient(90deg, gray, white)',
-  backgroundClip: 'text',
-  marginBottom: '2rem',
+const ContentBoxContent = styled.div({
+  color: 'gray',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -76,59 +119,32 @@ const ContentDataDesc = styled.div({
   },
 });
 
-const ContentDatasSubheader = styled.div({
-  fontSize: '20px',
-  fontFamily: '"Keania One", sans-serif',
-  [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '25px',
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '25px',
-  },
-});
-
-const ProTypeImage = styled.div({
-  [`@media (min-width: ${breakpoints.md})`]: {
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-  },
-});
-
-const WebContentContainer = styled.div({
-  display: 'grid',
-  gap: '1rem',
-  marginBottom: '3rem',
-  [`@media (min-width: ${breakpoints.md})`]: {
-    gridTemplateColumns: '1fr 1fr',
-    marginTop: '2rem',
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-  },
-});
-
-const WebImage = styled.div({
-  [`@media (min-width: ${breakpoints.md})`]: {
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-  },
-});
-
-const WebButtom = styled.div({
-  padding: '0.5rem',
-  background: 'white',
-  margin: 'auto',
-  textAlign: 'center',
+const Button = styled.div({
+  position: 'absolute',
+  borderRadius: '25px',
+  width: '50%',
+  right: '0',
+  backgroundColor: 'white',
   color: 'black',
-  borderRadius: '50px',
-  width: '100%',
-  ':hover': {
-    backgroundImage: 'linear-gradient(180deg, white, gray)',
+  textAlign: 'center',
+  marginTop: '1rem',
+  marginRight: '1rem',
+    ':hover': {
+    background: 'gray',
+    color: 'white',
   },
-  fontFamily: '"Keania One", sans-serif',
   [`@media (min-width: ${breakpoints.md})`]: {
-    width: '40%',
-    right: '0',
-    marginBottom: '2rem',
+    width: '30%',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    width: '18%',
+    marginTop: '1rem',
+    marginRight: '3rem',
+  },
+});
+
+const Load = styled.div({
+  [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },
@@ -153,31 +169,6 @@ export default function ImageAndDataPage({ params }) {
   
     const fetchData = async () => {
       try {
-        // Hent _HEADER billedet
-        const { data: headerData, error: headerError } = await supabase.storage
-          .from('LochmannWeb')
-          .download(`${imageBaseName}_HEADER`);
-  
-        if (headerError) throw headerError;
-        setSelectedHeaderImage(URL.createObjectURL(headerData));
-  
-        // Hent _MOBIL billedet
-        const { data: mobileHeaderData, error: mobileHeaderError } = await supabase.storage
-          .from('LochmannWeb')
-          .download(`${imageBaseName}_MOBIL`);
-  
-        if (mobileHeaderError) throw mobileHeaderError;
-        setSelectedMobileHeaderImage(URL.createObjectURL(mobileHeaderData));
-  
-        // Hent _PROTOTYPE billedet
-        const { data: prototypeData, error: prototypeError } = await supabase.storage
-          .from('LochmannWeb')
-          .download(`${imageBaseName}_PROTOTYPE`);
-  
-        if (prototypeError) throw prototypeError;
-        console.error('Prototype error:', prototypeError);
-        setSelectedPrototypeImage(URL.createObjectURL(prototypeData));
-  
         // Hent _WEB billedet
         const { data: webData, error: webError } = await supabase.storage
           .from('LochmannWeb')
@@ -215,107 +206,61 @@ export default function ImageAndDataPage({ params }) {
 
   return (
     <>
+    <IMG>
+    {selectedLW && (
     <Container>
-    {(!isMobile && 
-        <HeaderImage>
-          {selectedHeaderImage && (
-            <img src={selectedHeaderImage} alt={`${params.id}_HEADER`} width={2000} />
-          )}
-        </HeaderImage>
-      )}
+      <Title>{selectedLW.title || 'Formål ikke tilgængeligt'}</Title>
 
-      {(isMobile && 
-        <HeaderImage>
-          {selectedMobileHeaderImage && (
-            <img src={selectedMobileHeaderImage} alt={`${params.id}_MOBIL`} width={2000} />
-          )}
-        </HeaderImage>
-      )}
+      <ContentBox>
+        <ContentTitle>{selectedLW.formål}</ContentTitle>
+        <div>
+          <ContentBoxContent>{selectedLW.formåldescription}</ContentBoxContent>
+        </div>
+      </ContentBox>
 
-      <Content>
-        {selectedLW && (
-          <>
-            <ContentData>
-              <ContentDataTitle>{selectedLW.formål}</ContentDataTitle>
-              <ContentDataDesc>{selectedLW.formåldescription}</ContentDataDesc>
-            </ContentData>
-  
-            <div>
-              <ContentDataTitle>{selectedLW.design}</ContentDataTitle>
-              <ContentDataDesc>{selectedLW.designdescription}</ContentDataDesc>
+      <ContentContainer>
+        <ContentTitle>{selectedLW.design}</ContentTitle>
+        <Box>
+          <ContentBoxContent>{selectedLW.designdescription}</ContentBoxContent>
 
-              <div>
-                <div>
-                  <ContentDatasSubheader>{selectedLW.designcolor}</ContentDatasSubheader>
-                  <ContentDataDesc>{selectedLW.designcolorcontent}</ContentDataDesc>
-                </div>
+          <div>
+            <ContentBoxTitle>{selectedLW.designcolor}</ContentBoxTitle>
+            <ContentBoxContent>{selectedLW.designcolorcontent}</ContentBoxContent>
+          </div>
 
-                <div>
-                  <ContentDatasSubheader>{selectedLW.designnavigation}</ContentDatasSubheader>
-                  <ContentDataDesc>{selectedLW.designnavigationcontent}</ContentDataDesc>
-                </div>
+          <div>
+            <ContentBoxTitle>{selectedLW.designnavigation}</ContentBoxTitle>
+            <ContentBoxContent>{selectedLW.designnavigationcontent}</ContentBoxContent>
+          </div>
 
-                <div>
-                  <ContentDatasSubheader>{selectedLW.designsektioner}</ContentDatasSubheader>
-                  <div>
-                    <ContentDataDesc>{selectedLW.designsektionhome}</ContentDataDesc>
-                    <ContentDataDesc>{selectedLW.designsektionabout}</ContentDataDesc>
-                    <ContentDataDesc>{selectedLW.designsektioninfo}</ContentDataDesc>
-                    <ContentDataDesc>{selectedLW.designsektionkontakt}</ContentDataDesc>
-                  </div>
-                </div>
+          <div>
+            <ContentBoxTitle>{selectedLW.designsektioner}</ContentBoxTitle>
+            <ContentBoxContent>{selectedLW.designsektionhome}</ContentBoxContent>
+            <ContentBoxContent>{selectedLW.designsektionabout}</ContentBoxContent>
+            <ContentBoxContent>{selectedLW.designsektioninfo}</ContentBoxContent>
+            <ContentBoxContent>{selectedLW.designsektionkontakt}</ContentBoxContent> <br />
+            <ContentBoxTitle>{selectedLW.designimages}</ContentBoxTitle>
+            <ContentBoxContent>{selectedLW.designimagescontent}</ContentBoxContent> <br />
+            <ContentBoxTitle>{selectedLW.designtypo}</ContentBoxTitle>
+            <ContentBoxContent>{selectedLW.designtypocontent}</ContentBoxContent> <br />
+            <ContentBoxTitle>{selectedLW.designicon}</ContentBoxTitle>
+            <ContentBoxContent>{selectedLW.designiconcontent}</ContentBoxContent>
+          </div>
+        </Box>
+      </ContentContainer>
 
-                <div>
-                  <ContentDatasSubheader>{selectedLW.designimages}</ContentDatasSubheader>
-                  <ContentDataDesc>{selectedLW.designimagescontent}</ContentDataDesc>
-                </div>
-
-                <div>
-                  <ContentDatasSubheader>{selectedLW.designtypo}</ContentDatasSubheader>
-                  <ContentDataDesc>{selectedLW.designtypocontent}</ContentDataDesc>
-                </div>
-
-                <div>
-                  <ContentDatasSubheader>{selectedLW.designicon}</ContentDatasSubheader>
-                  <ContentDataDesc>{selectedLW.designiconcontent}</ContentDataDesc>
-                </div>
-              </div>
-            </div>
-          </>
-        )}
-  
-        <ProTypeImage>
-          {selectedPrototypeImage ? (
-            <img src={selectedPrototypeImage} className='m-auto' alt={`${params.id}_PROTOTYPE`} width={1000} />
-          ) : (
-            <div>Loading...</div>
-          )}
-        </ProTypeImage>
-  
-        <WebContentContainer>
-          <ContentData>
-            {selectedLW && (
-              <div>
-                <ContentDataTitle>{selectedLW.websitename}</ContentDataTitle>
-                <ContentDataDesc>{selectedLW.websitedescription}</ContentDataDesc>
-              </div>
-            )}
-          </ContentData>
-  
-          <WebImage>
-            {selectedWebImage && (
-              <img src={selectedWebImage} alt={`${params.id}_WEB`} width={800} />
-            )}
-          </WebImage>
-        </WebContentContainer>
-
-        <WebButtom>
-            {selectedLW && (
-                <a href={selectedLW.websitelink} target="_blank" rel="noopener noreferrer">{selectedLW.websitebutton}</a>
-            )}
-        </WebButtom>
-      </Content>
+      <ContentBox>
+        <ContentTitle>{selectedLW.websitename}</ContentTitle>
+        <Content><img src={selectedWebImage} alt={`${params.id}_WEB`} width={1000} /></Content>
+      </ContentBox>
     </Container>
+    )}
+    </IMG>
+    {selectedLW && (
+      <Button>
+          <a href={selectedLW.websitelink} target="_blank" rel="noopener noreferrer">{selectedLW.websitebutton}</a>
+      </Button>
+    )}
   </>
   );
 }

@@ -4,8 +4,9 @@ import React from 'react';
 import styled from '@emotion/styled';
 
 const breakpoints = {
-  md: '768px', 
-  lg: '1024px', 
+  sm: '699px',
+  md: '700px', 
+  lg: '1024px',
 };
 
 const Container = styled.div({
@@ -17,7 +18,8 @@ const Container = styled.div({
   marginTop: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     padding: '2rem',
-    gap: '5rem',
+    marginTop: '0rem',
+    gap: '3rem',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
     marginTop: '2rem',
@@ -27,10 +29,10 @@ const Container = styled.div({
 const Title = styled.div({
   fontSize: '13px',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '25px',
+    fontSize: '18px',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '18px',
+    fontSize: '25px',
    },
 });
 

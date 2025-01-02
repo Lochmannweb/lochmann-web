@@ -16,10 +16,11 @@ const Container = styled.div({
     display: 'flex',
     justifyContent: 'space-between',
     marginBottom: '4rem',
-    marginTop: '0rem',
+    marginTop: '5rem',
     [`@media (min-width: ${breakpoints.md})`]: {
       width: '96%',
       justifySelf: 'center',
+      marginTop: '10rem',
     },
   });
 

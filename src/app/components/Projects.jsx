@@ -11,8 +11,9 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const breakpoints = {
-    md: '768px', 
-    lg: '1024px', 
+  sm: '699px',
+  md: '700px', 
+  lg: '1024px',
   };
 
 const IMG = styled.div({
@@ -26,59 +27,56 @@ const IMG = styled.div({
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
+    marginTop: '8rem', 
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '95%',
       height: '70vh',
+      marginTop: '10rem',
       },
 });
 
 const Container = styled.div({
   display: 'grid',
-  // marginTop: '9rem',
-  // padding: '2rem',
-  // position: 'absolute',
   textAlign: 'center',
   justifySelf: 'center',
     [`@media (min-width: ${breakpoints.md})`]: {
-      margin: 'auto',
+      marginTop: '-2rem', 
       padding: '2rem',
-      // marginTop: '35rem',
       },
 });
 
 const HeaderContent = styled.div({
   marginTop: '1rem',
+  justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
     alignContent: 'center',
+    width: '90%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },
 })
 
 const ImageGrid = styled.div({
-  justifySelf: 'center',
   marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    // marginBottom: '3rem',
-    // marginTop: '3rem',
+    marginBottom: '0rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
+    display: 'flex',
+    gap: '1rem',
   },
 });
 
 const ImageBox = styled.div({
-  // top: '20%',
-  // left: '50%',
   transform: 'trasnslate(0%, 0%)',
-  width: '300px',
-  // height: '300px',
+  width: '90%',
+  justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
-    width: '1000px',
-    height: '300px',
-    marginBottom: '5rem',
+    marginBottom: '1rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
+    width: '70%',
   },
 });
 
@@ -98,8 +96,8 @@ const Button = styled.div({
   color: 'black',
   margin: 'auto',
   width: '30%',
-  fontWeight: 'bold',
-  padding: '0.3rem',
+  // fontWeight: 'bold',
+  // padding: '0.3rem',
   borderRadius: '50px',
   textAlign: 'center',
   marginTop: '1rem',
@@ -108,9 +106,9 @@ const Button = styled.div({
     color: 'white',
   },
   [`@media (min-width: ${breakpoints.md})`]: {
-    padding: '0.5rem',
+    // padding: '0.5rem',
     fontSize: '20px',
-    width: '40%',
+    width: '25%',
     marginTop: '2rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -179,7 +177,7 @@ const Content = styled.div({
   animation: ({ inView }) =>
     inView ? 'fadeUp 1s ease-in-out 0.6s forwards' : 'none',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '23px',
+    fontSize: '20px',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '20px',
@@ -191,9 +189,6 @@ const Content = styled.div({
 
 
 function LatestProjects() {
-  const theme = useTheme();
-  // const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
-  // const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
   const { ref: titleRef, inView: titleInView } = useInView({ triggerOnce: true });
   const { ref: headerRef, inView: headerInView } = useInView({ triggerOnce: true });
@@ -239,17 +234,6 @@ function LatestProjects() {
 
   return (
     <>
-    {/* {(!isMobile && 
-    <IMG>
-      <img className="border-borderColor rounded-xl lg:h-full brightness-50" src="/header-work-dbg.jpg" alt="bg" width={2000} /> 
-    </IMG>
-    )}
-
-    {(isTablet && 
-      <IMG>
-      <img className="rounded-2xl" src="/recent-header-mbg.png" alt="mobil" /> 
-      </IMG>
-    )} */}
     <IMG>
       <Container>
           <HeaderContent >
@@ -258,10 +242,8 @@ function LatestProjects() {
             <Content ref={contentRef} inView={contentInView}>{RecentWorkData.content}</Content>
           </HeaderContent>
         <ImageGrid>
-          <ImageBox><img class="card pinned" src="/cgc-desktop.png" alt="png" width={1000} /></ImageBox>
-        </ImageGrid>
-        <ImageGrid>
-          <ImageBox><img class="card pinned" src="/foofest-desktop.png" alt="png" width={1000} /></ImageBox>
+          <ImageBox><img src="/cgc-desktop.png" alt="png"/></ImageBox>
+          <ImageBox><img src="/foofest-desktop.png" alt="png" /></ImageBox>
         </ImageGrid>
       </Container>
       </IMG>

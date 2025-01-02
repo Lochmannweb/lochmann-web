@@ -1,40 +1,47 @@
 
 // My work page
 export const MyWorkHeader = {
-    title: "The proces",
-    header: "From idea to the finish product",
-    subheader: "I help startups and businesses design and develop modern, user-friendly websites, whether starting from scratch or through a complete redesign, ensuring they align perfectly with your goals and vision.",
-    content1: "I am available to assist both startups and larger companies with brand development, redesigns, or custom-built websites from scratch.",
-    content2: "With over two years of experience as a developer, my expertise includes JavaScript, Tailwind CSS, CSS, and React/Next",
-    content3: "Additionally, I have experience working with HTML, Astro, and Typescript.",
+    title: "HAVE EYES ON THE PROCESS OR BE INSPIRED BY THE PROJECTS",
+    subheader: "Jeg startede tilbage i 2023 som studerende på KEA hvor jeg studerer Multidie designer men med fokus på Frontend og en smule Backend. Når jeg er færdig uddannet, starter mit næste kapitel på en Bachelor indenfor Web applikation, som vil tage 1.5 år.",
+    processTitle: "Follow the prcoess",
+    processSubheader: "Jeg startede tilbage i 2023 som studerende på KEA hvor jeg studerer Multidie designer men med fokus på Frontend og en smule Backend.",
+    projectTitle: 'All projects',
 }
 
 // Step by step
 export const StepByStep = {
     title: "Step-by-Step Proces",
     contact: {
-        title: "1. First contact & requirements collection",
-        content: "We start with a free conversation to understand the you'r needs and vision.",
+        title: "1. Initial Consultation & Requirements Gathering",
+        content: "You & I begin with a conversation to understand your needs and vision.",
     },
     tilbudKontrakt: {
         title: "2. Offer & contract",
-        content: "You receive a clear and detailed offer so we can get started.",
+        content: "You will receive a clear and detailed proposal, enabling us to get started.",
     },
     planlægning: {
-        title: "3. Planning & design",
-        content: "I will outline and design your website, where feedback or other ideas can come into play.",
+        title: "3. Design plan",
+        content: "I will create a draft and design for your website, giving you the opportunity to share your feedback.",
     },
-    udvikling: {
-        title: "4. Development",
-        content: "Website is developed, where it is either built from scratch or redesigned.",
+    preview: {
+        title: "4. Preview",
+        content: "hvdjskighnkjlgfnkhblædmj",
     },
-    testAfWebsite: {
-        title: "5. Testing & launch",
-        content: "I thoroughly test your website before it goes live.",
+    develop: {
+        title: "5. Development",
+        content: "The code is written, and we build your website from the ground up or implement a redesign.",
     },
-    vedligeholdelse: {
-        title: "6. Maintenance & support",
-        content: "Based on the contract, I ensure that the website meets you'r requirements, if it is not to be updated continuously. If it is to be updated continuously, updates will work optimally.",
+    test: {
+        title: "6. Test",
+        content: "hvdjskighnkjlgfnkhblædmj",
+    },
+    lancing: {
+      title: "7. Lancing",
+      content: "Thorough testing is conducted to ensure your website is fully ready before going live.",
+    },
+    maintenance: {
+      title: "8. Maintenance & support",
+      content: "I ensure your website remains updated and performs at its best.",
     },
     button: "Let's get started",
 }

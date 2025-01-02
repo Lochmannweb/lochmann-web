@@ -14,40 +14,46 @@ const Container = styled.div({
     display: 'grid',
     gap: '2rem',
     margin: 'auto',
+    [`@media (min-width: ${breakpoints.md})`]: {
+      gap: '4rem',
+  },
     [`@media (min-width: ${breakpoints.lg})`]: {
-        gap: '4rem',
+      gap: '2rem',
     },
 });
 
-const Title = styled.div({
-  fontSize: '30px',
-  margin: 'auto',
-  fontFamily: '"Keania One", sans-serif',
-  borderBottomColor: '#A100FF',
+const Box = styled.div({
+  backgroundColor: '#000000a3',
+  borderColor: 'gray',
+  borderRadius: '10px',
   borderWidth: 'thin',
-  textAlign: 'start',
-  borderRadius: '0px',
-  marginBottom: '1rem',
+  justifySelf: 'center',
+  display: 'grid',
+  gap: '2rem',
+  padding: '1rem',
+  width: '100%',
+  alignItems: 'center',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    // gridTemplateColumns: '1fr 1fr',
+    width: '70%',
+    display: 'flex',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    // width: '70%',
+  },
+});
 
-  // scroll animation text
-  color: 'hsl(0 0% 100% / 0)',
-  backgroundImage: 'linear-gradient(90deg, white, #A100FF)',
-  backgroundSize: '50% 100%',
-  backgroundRepeat: 'no-repeat',
-  animation: 'scroll-reveal linear forwards',
-  animationTimeline: 'view()',
-  backgroundClip: 'text',
+const Title = styled.div({
+  fontSize: '20px',
+  margin: 'auto',
+  textAlign: 'start',
+  color: 'white',
+  fontFamily: 'emoji',
     [`@media (min-width: ${breakpoints.md})`]: {
-      fontSize: '35px',
-      borderRadius: '0px 100px',
-      borderColor: '#A100FF',
-      textAlign: 'center',
-      width: '90%',
-      padding: '1rem',
-      marginBottom: '-3rem',
+      fontSize: '25px',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      width: '45%',
+      fontSize: '25px',
       },
 });
 
@@ -55,47 +61,13 @@ const Content = styled.div({
     fontSize: '15px',
     textAlign: 'start',
     width: '90%',
-    marginTop: '-1rem',
-    color: 'hsl(0 0% 100% / 0)',
-    backgroundImage: 'linear-gradient(90deg, gray, white)',
-    backgroundClip: 'text',
+    color: 'gray',
     [`@media (min-width: ${breakpoints.md})`]: {
       margin: 'auto',
-      marginTop: '4rem',
-      textAlign: 'center',
-      fontSize: '20px',
-      width: '70%',
-      marginBottom: '2rem',
+      fontSize: '16px',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
-        width: '50%',
-      },
-  });
-
-const Button = styled.div({
-  padding: '0.5rem',
-  marginTop: '3rem',
-  borderRadius: '20px',
-  textAlign: 'center',
-  fontSize: '15px',
-  color: 'white',
-  filter: 'drop-shadow(0 0 0.75rem #A100FF)',
-  backgroundImage: 'linear-gradient(90deg, black, #A100FF)',
-  fontFamily: '"Keania One", sans-serif',
-  ':hover': {
-    backgroundImage: 'linear-gradient(180deg, black, #A100FF)',
-  },
-    [`@media (min-width: ${breakpoints.md})`]: {
-      margin: 'auto',
-      marginTop: '3rem',
-      width: '25%',
-      padding: '0.5rem',
-      fontSize: '15px',
-      width: '50%',
-      },
-    [`@media (min-width: ${breakpoints.lg})`]: {
-      width: '15%',
-      fontSize: '20px',
+      fontSize: '16px',
       },
   });
 
@@ -104,37 +76,70 @@ const Aboutpage = () => {
   return (
     <>
     <Container>
-        <div> 
+        <Box>
+          <img src="/chat.svg" alt="" width={60}/>
+          <div>
             <Title>{StepByStep.contact.title}</Title>
             <Content>{StepByStep.contact.content}</Content>
-        </div>
+          </div>
+        </Box>
 
-        <div> 
+        <Box> 
+          <img src="/contract.svg" alt="" width={60} />
+          <div>
             <Title>{StepByStep.tilbudKontrakt.title}</Title>
             <Content>{StepByStep.tilbudKontrakt.content}</Content>
-        </div>
+          </div>
+        </Box>
 
-        <div> 
+        <Box> 
+          <img src="/blueprint.svg" alt="" width={60} />
+          <div>
             <Title>{StepByStep.planlægning.title}</Title>
             <Content>{StepByStep.planlægning.content}</Content>
-        </div>
+          </div>
+        </Box>
 
-        <div> 
-            <Title>{StepByStep.udvikling.title}</Title>
-            <Content>{StepByStep.udvikling.content}</Content>
-        </div>
+        <Box> 
+          <img src="/file.svg" alt="" width={60} />
+          <div>
+            <Title>{StepByStep.preview.title}</Title>
+            <Content>{StepByStep.preview.content}</Content>
+          </div>
+        </Box>
 
-        <div> 
-            <Title>{StepByStep.testAfWebsite.title}</Title>
-            <Content>{StepByStep.testAfWebsite.content}</Content>
-        </div>
+        <Box> 
+          <img src="/coding.svg" alt="" width={60} /> 
+          <div>
+            <Title>{StepByStep.develop.title}</Title>
+            <Content>{StepByStep.develop.content}</Content>
+          </div>
+        </Box>
 
-        <div> 
-            <Title>{StepByStep.vedligeholdelse.title}</Title>
-            <Content>{StepByStep.vedligeholdelse.content}</Content>
-        </div>
+        <Box> 
+          <img src="/checklist.svg" alt="" width={60} />
+          <div>
+              <Title>{StepByStep.test.title}</Title>
+              <Content>{StepByStep.test.content}</Content>
+          </div>
+        </Box>
+
+        <Box> 
+          <img src="/launch.svg" alt="" width={60} /> 
+          <div>
+            <Title>{StepByStep.lancing.title}</Title>
+            <Content>{StepByStep.lancing.content}</Content>
+          </div>
+        </Box>
+
+        <Box> 
+          <img src="/maintenance.svg" alt="" width={60} />
+          <div>
+              <Title>{StepByStep.maintenance.title}</Title>
+              <Content>{StepByStep.maintenance.content}</Content>
+          </div>
+        </Box>
     </Container>  
-     <Button><a href="/Contact">{StepByStep.button}</a></Button>
     </>
   )
 }

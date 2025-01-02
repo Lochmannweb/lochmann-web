@@ -2,11 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import styled from '@emotion/styled';
 import { TechData } from '../data/TechData';
 import "@fontsource/keania-one";
-import { useTheme } from '@mui/material/styles';
-import { useMediaQuery } from '@mui/material';
 
 const breakpoints = {
-  md: '768px',
+  sm: '699px',
+  md: '700px', 
   lg: '1024px',
 };
 
@@ -35,10 +34,12 @@ const IMG = styled.div({
   marginTop: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
+    marginTop: '8rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '95%',
       height: '70vh',
+      marginTop: '10rem',
       },
 });
 
@@ -47,6 +48,7 @@ const Container = styled.div({
   marginTop: '1rem',
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
+    marginTop: '-2rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
   },
@@ -102,11 +104,18 @@ const Subheader = styled.div({
   fontFamily: 'fantasy',
   marginTop: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '40px',
+    color: 'white',
+    fontFamily: 'Fantasy',
+    textAlign: 'start',
+    width: '67%',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '70px',
     color: 'white',
     fontFamily: 'Fantasy',
     textAlign: 'start',
-    width: '45%',
+    marginTop: '0rem',
   },
 });
 
@@ -114,6 +123,7 @@ const Content = styled.div({
   display: 'grid',
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
+    padding: '2rem',
   },
 });
 
@@ -123,7 +133,6 @@ const Expertise = styled.div({
   padding: '2rem',
   margin: 'auto',
   [`@media (min-width: ${breakpoints.md})`]: {
-    padding: '5rem',
     marginTop: '1rem',
     display: 'grid',
   },
@@ -203,7 +212,7 @@ const ExpertiseContentText = styled.div({
 });
 
 const Button = styled.div({
-  padding: '0.5rem',
+  // padding: '0.5rem',
   borderRadius: '20px',
   textAlign: 'center',
   fontSize: '15px',
@@ -212,7 +221,7 @@ const Button = styled.div({
   marginTop: '1rem',
   color: 'black',
   backgroundColor: 'white',
-  fontWeight: 'bold',
+  // fontWeight: 'bold',
   ':hover': {
     background: 'gray',
     color: 'white',
@@ -220,10 +229,9 @@ const Button = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '20px',
     margin: 'auto',
-    width: '20%',
-    marginBottom: '8rem',
-    marginTop: '-2rem',
-    width: '40%',
+    width: '25%',
+    marginTop: '2rem',
+    width: '25%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '15%',
@@ -234,9 +242,6 @@ const Button = styled.div({
 });
 
 function App() {
-  const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('sm'));
-  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 
     // Using Intersection Observer to trigger the animation when it comes into view
     const [isInView, setIsInView] = useState(false);
@@ -265,16 +270,6 @@ function App() {
 
   return (
     <>
-      {/* {(!isMobile && 
-        <IMG>
-          <img className="rounded-2xl lg:h-full brightness-50" src="/header-expertise-dbg.jpg" alt="mobil" width={2000} /> 
-        </IMG>
-      )}
-      {(isTablet && 
-        <IMG>
-          <img className="rounded-2xl" src="/tech-header-mbg.png" alt="mobil" /> 
-        </IMG>
-      )} */}
     <IMG>
       <Container>
         <HeaderContent>

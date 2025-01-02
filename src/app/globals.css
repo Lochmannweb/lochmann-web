@@ -4,7 +4,9 @@
 
 /* mobil */
 body {
-  background-color: #000;
+  background-color: #080505;
+  /* background-image: url(/test-bg.jpg); */
+  /* background-size: cover; */
   color: white;
 }
 

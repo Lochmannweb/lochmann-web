@@ -20,7 +20,11 @@ export default function Gallery() {
 
         // Filter out images that have `_angle` in their name to show only the main images
         const galleryImages = imageData.filter((image) =>
-          image.name.indexOf('_PROTOTYPE') === -1 && image.name.indexOf('_WEB') === -1 && image.name.indexOf('_HEADER') === -1 && image.name.indexOf('_MOBIL') === -1 && image.name !== '.emptyFolderPlaceholder'
+          image.name.indexOf('_PROTOTYPE') === -1 && 
+          image.name.indexOf('_WEB') === -1 && 
+          image.name.indexOf('_HEADER') === -1 && 
+          image.name.indexOf('_MOBIL') === -1 && 
+          image.name !== '.emptyFolderPlaceholder'
         );
 
         setMainCGC(galleryImages);
