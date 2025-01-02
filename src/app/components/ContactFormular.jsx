@@ -9,7 +9,7 @@ function ContactForm() {
       return <p className='font-keania md:text-2xl m-auto md:r-44 md:mt-48'>Looking forward to work with you!</p>;
   }
   return (
-    <form className='grid gap-4 md:mt-0 lg:m-auto w-96' onSubmit={handleSubmit}>
+    <form className='w-80 md:w-96 grid gap-4 md:mt-0 lg:m-auto' onSubmit={handleSubmit}>
       <div className='grid'>
         <label htmlFor="text" className='text-start'>
           Company name

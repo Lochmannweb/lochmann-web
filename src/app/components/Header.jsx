@@ -48,11 +48,12 @@ const Container = styled.div({
   display: 'grid',
   marginTop: '2rem',
   justifySelf: 'center',
-  marginTop: '5rem',
+  marginTop: '12rem',
+  marginBottom: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     justifySelf: 'center',
     textAlign: 'center',
-    marginTop: '11rem',
+    marginTop: '01rem',
     marginBottom: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -62,10 +63,11 @@ const Container = styled.div({
 });
 
 const HeaderTitle = styled.div({
-  fontSize: '30px',
+  fontSize: '35px',
   textAlign: 'center',
   marginBottom: '0.5rem',
   lineHeight: '2rem',
+  fontFamily: 'Fantasy',
   // Animation
   opacity: '0',
   animation: 'fadeUp 1s ease-in-out forwards',
@@ -81,17 +83,16 @@ const HeaderTitle = styled.div({
     fontSize: '100px',
     lineHeight: '3rem',
     marginTop: '2rem',
-    fontFamily: 'Fantasy',
-    textTransform: 'uppercase',
   },
 });
 
 
 const Subheader = styled.div({
-  fontSize: '30px',
+  fontSize: '35px',
   textAlign: 'center',
   marginBottom: '0.5rem',
   lineHeight: '2rem',
+  fontFamily: 'Fantasy',
 
   // Animation
   opacity: '0', 
@@ -110,8 +111,6 @@ const Subheader = styled.div({
     lineHeight: '3rem',
     marginTop: '2rem',
     marginBottom: '2rem',
-    fontFamily: 'Fantasy',
-    textTransform: 'uppercase',
   }
 });
 
@@ -207,7 +206,7 @@ const Button = styled.div({
   color: 'black',
   fontSize: '13px',
   textAlign: 'center',
-  marginTop: '2rem',
+  marginTop: '8rem',
   marginBottom: '2rem',
   background: 'white',
   borderRadius: '25px',

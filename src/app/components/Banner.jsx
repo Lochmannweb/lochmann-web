@@ -28,7 +28,7 @@ const Container = styled.div({
 });
 
 const Title = styled.div({
-  fontSize: '13px',
+  fontSize: '10px',
   fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '18px',
