@@ -17,14 +17,17 @@ const IMG = styled.div({
   borderRadius: '10px',
   borderColor: '#6b6b6b',
   borderWidth: 'thin',
-  backgroundImage: `url('/header-work-dbg.jpg')`,
+  backgroundImage: `url('/test.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
+  marginTop: '3.5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
+    marginTop: '6rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '95%',
+      marginTop: '6rem',
       // height: '70vh',
       },
 });
@@ -39,7 +42,6 @@ const Container = styled.div({
     marginBottom: '0rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    // marginTop: '5rem',
     marginBottom: '0rem',
   },
 })
