@@ -19,8 +19,8 @@ const Page = () => {
   return (
     <Container> 
       <Header/>
-      <Projects/>
       <Tech/>
+      <Projects/>
       <Feedback/>
       <ContactForm />
     </Container> 

@@ -14,7 +14,7 @@ const breakpoints = {
     borderRadius: '10px',
     borderColor: '#6b6b6b',
     borderWidth: 'thin',
-    backgroundImage: `url(' /header-feedback-dbg.jpg')`,
+    backgroundImage: `url('/test.jpg')`,
     justifySelf: 'center',
     backgroundSize: 'cover',
     marginTop: '5rem',
@@ -23,8 +23,7 @@ const breakpoints = {
       marginTop: '8rem',
       },
       [`@media (min-width: ${breakpoints.lg})`]: {
-        width: '95%',
-        height: '70vh',
+        width: '80%',
         marginTop: '10rem',
         },
   });
@@ -111,12 +110,16 @@ const breakpoints = {
     borderColor: '#6b6b6b',
     borderWidth: 'thin',
     borderRadius: '15px',
-    backgroundImage: `url('/header-feedback-dbg.jpg')`,
-    backgroundSize: 'cover',
+    backgroundImage: `url('/box-bg.jpg')`,
     width: '90%',
+    // height: '13vh',
     justifySelf: 'center',
-    padding: '1rem',
+    padding: '2rem',
     [`@media (min-width: ${breakpoints.md})`]: {
+      // height: '15vh',
+    },
+    [`@media (min-width: ${breakpoints.lg})`]: {
+      // height: '50vh',
     },
   });
 
@@ -134,7 +137,7 @@ const breakpoints = {
     color: 'gray',
     marginTop: '1rem',
      [`@media (min-width: ${breakpoints.md})`]: {
-      fontSize: '18px',
+      fontSize: '20px',
       // paddingRight: '5rem',
     },
   })

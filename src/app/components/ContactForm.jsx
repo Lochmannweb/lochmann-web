@@ -15,7 +15,7 @@ const IMG = styled.div({
   borderRadius: '10px',
   borderColor: '#6b6b6b',
   borderWidth: 'thin',
-  backgroundImage: `url('/header-contact-form-dbg.jpg')`,
+  backgroundImage: `url('/test.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
@@ -23,7 +23,7 @@ const IMG = styled.div({
     marginTop: '8rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      width: '95%',
+      width: '80%',
       height: '70vh',
       marginTop: '10rem',
       },

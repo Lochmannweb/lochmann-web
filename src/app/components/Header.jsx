@@ -25,36 +25,40 @@ const fadeUp = `
 `;
 
 const IMG = styled.div({
-  width: '95%',
-  borderRadius: '10px',
-  borderColor: '#6b6b6b',
-  borderWidth: 'thin',
-  backgroundImage: `url('/header-dbg.jpg')`,
-  // backgroundColor: '#000000d4',
-  backgroundSize: 'cover',
+  width: '100%',
+  // borderRadius: '10px',
+  // borderColor: '#1c1c1c',
+  // borderWidth: 'thin',
+  backgroundImage: `url('/test.jpg')`,
+  // backgroundSize: 'cover',
+  // backgroundRepeat: 'no-repeat',
   justifySelf: 'center',
-  marginTop: '4rem',
+  // marginTop: '4rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    width: '95%',
+    // width: '95%',
+    // backgroundSize: 'contain',
     },
-    [`@media (min-width: ${breakpoints.lg})`]: {
-      width: '95%',
-      height: '70vh',
-      marginTop: '6rem',
-      },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    // width: '95%',
+    // height: '70vh',
+    // marginTop: '6rem',
+    },
 });
 
 const Container = styled.div({
   display: 'grid',
   marginTop: '2rem',
   justifySelf: 'center',
+  marginTop: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     justifySelf: 'center',
     textAlign: 'center',
-    marginTop: '2.5rem',
+    marginTop: '11rem',
+    marginBottom: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    marginTop: '5rem',
+    marginTop: '12rem',
+    marginBottom: '3rem',
   },
 });
 

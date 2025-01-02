@@ -8,7 +8,8 @@ import { useTheme } from '@mui/material/styles';
 import "@fontsource/keania-one";
 
 const breakpoints = {
-  md: '768px', 
+  sm: '699px',
+  md: '700px', 
   lg: '1024px', 
 };
 
@@ -24,7 +25,7 @@ const Container = styled.div({
   width: '100%',
   top: '0',
   position: 'fixed',
-  backgroundColor: '#080505',
+  backgroundColor: '#000000bd',
   zIndex: '50',
   [`@media (min-width: ${breakpoints.md})`]: {
     borderTopColor: 'black',
@@ -41,25 +42,17 @@ const OpenMenu = styled.div({
   transition: 'transform 0.3s ease',
   position: 'fixed',
   left: 0,
-  marginTop: '-3.5rem',
   padding: '1rem',
   width: '100%',
-  paddingBottom: '15px',
+  paddingBottom: '30rem',
   backgroundColor: 'black',
   zIndex: '50',
   [`@media (min-width: ${breakpoints.md})`]: {
     top: '0',
-    gap: '1rem',
     bottom: '',
-    right: '16rem',
-    width: '35%',
-    height: '3.5rem',
-    borderRadius: '50px',
-    left: 'inherit',
-    display: 'flex',
-    justifyContent: 'end',
+    height: '10rem',
+    display: 'grid',
     alignItems: 'center',
-    marginTop: '2.5rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     top: '0',
@@ -82,11 +75,14 @@ const Links = styled.div({
   display: 'grid',
   paddingBottom: '20px',
   gap: '10px',
+  marginTop: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
-    paddingTop: '1rem',
     gap: '30px',
-    // alignItems: 'center',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    display: 'flex',
+    gap: '30px',
   },
 });
 
@@ -97,9 +93,6 @@ const OpenMenuLogoAndIcon = styled.div({
 
 const LinksContainer = styled.div({
   display: 'flex',
-  // justifySelf: 'center',
-  // textAlign: 'center',
-  // marginTop: '2rem',
 });
 
 
