@@ -31,9 +31,9 @@ const Container = styled.div({
     borderTopColor: 'black',
     top: '0', 
     bottom: '', 
-    height: '6rem',
+    height: '4rem',
     alignItems: 'center',
-    padding: '3rem',
+    padding: '2rem',
   },
 });
 
@@ -124,16 +124,16 @@ function App() {
                 />
               </div>
             )}
-              <a className='hover:text-hover-menu' href="/" prefetch={false}>LOCHMANNWEB</a>
+              <a className='hover:text-hover-menu md:text-xs' href="/" prefetch={false}>LOCHMANNWEB</a>
             </div>
   
             <LinksContainer>
                 <ul>
                   <Links>
-                    <a className='hover:text-hover-menu' href="/About" prefetch={false}>JOURNEY</a>
-                    <a className='hover:text-hover-menu' href="/Services" prefetch={false}>SERVICES</a>
-                    <a className='hover:text-hover-menu' href="/MyWork" prefetch={false}>PROCESS TO PROJECT</a>
-                    <a className='hover:text-hover-menu' href="/Contact" prefetch={false}>CONTACT</a>
+                    <a className='hover:text-hover-menu md:text-xs' href="/About" prefetch={false}>JOURNEY</a>
+                    <a className='hover:text-hover-menu md:text-xs' href="/Services" prefetch={false}>SERVICES</a>
+                    <a className='hover:text-hover-menu md:text-xs' href="/MyWork" prefetch={false}>PROCESS TO PROJECT</a>
+                    <a className='hover:text-hover-menu md:text-xs' href="/Contact" prefetch={false}>CONTACT</a>
                   </Links>
                 </ul>
             </LinksContainer>
@@ -157,7 +157,7 @@ function App() {
                 />
               </div>
             )}
-              <a className='hover:text-hover-menu' href="/" prefetch={false}>LOCHMANNWEB</a>
+              <a className='hover:text-hover-menu md:text-sm' href="/" prefetch={false}>LOCHMANNWEB</a>
             </div>
   
             <div className='flex items-center'>
@@ -186,7 +186,7 @@ function App() {
                   />
                 </div>
               )}
-              <a className='' href="/" prefetch={false}>LOCHMANNWEB</a>
+              <a className='md:text-sm' href="/" prefetch={false}>LOCHMANNWEB</a>
             </div>
 
                 <div>
@@ -205,11 +205,11 @@ function App() {
             <LinksContainer>
                 <ul>
                   <Links>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/About" prefetch={false}>Journey</a>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/Services" prefetch={false}>Services</a>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/MyWork" prefetch={false}>Process To Project</a>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="/Contact" prefetch={false}>Contact</a>
-                    <a className='text-lg md:text-lg hover:text-hover-menu' href="https://www.instagram.com/lochmannweb" prefetch={false}>Instagram</a>
+                    <a className=' hover:text-hover-menu md:text-sm' href="/About" prefetch={false}>Journey</a>
+                    <a className=' hover:text-hover-menu md:text-sm' href="/Services" prefetch={false}>Services</a>
+                    <a className=' hover:text-hover-menu md:text-sm' href="/MyWork" prefetch={false}>Process To Project</a>
+                    <a className=' hover:text-hover-menu md:text-sm' href="/Contact" prefetch={false}>Contact</a>
+                    <a className=' hover:text-hover-menu md:text-sm' href="https://www.instagram.com/lochmannweb" prefetch={false}>Instagram</a>
                   </Links>
                 </ul>
             </LinksContainer>

@@ -19,12 +19,15 @@ const IMG = styled.div({
   backgroundSize: 'cover',
   justifySelf: 'center',
   marginBottom: '5rem',
+  marginTop: '3.5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
+    marginTop: '6rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '95%',
       padding: '1rem',
+      marginTop: '6rem',
       },
 });
 

@@ -22,13 +22,16 @@ const IMGHeader = styled.div({
   backgroundSize: 'cover',
   justifySelf: 'center',
   marginBottom: '5rem',
+  marginTop: '4rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%', 
+    marginTop: '6rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '95%',
       height: '70vh',
       marginBottom: '10rem',
+      marginTop: '6rem',
       },
 });
 

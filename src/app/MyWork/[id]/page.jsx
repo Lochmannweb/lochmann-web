@@ -20,8 +20,10 @@ const IMG = styled.div({
   backgroundImage: `url('/header-dbg.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
+  marginTop: '3.5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
+    marginTop: '6rem',
     // height: '230vh',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {

@@ -15,7 +15,7 @@ module.exports = {
       'white': '#fff',
       'black': '#000',
       'gray': '#aaa',
-      'hover-menu': '#A100FF', 
+      'hover-menu': '#b76f6f', 
       'menu': '#2524244f0',
       'stagesProces': 'rgba(43, 0, 0, 0.40)',
       'borderImage': 'linear-gradient(130deg, #840000, #FFF, #000, #FFF, #840000) 1',

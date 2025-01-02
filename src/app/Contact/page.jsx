@@ -18,29 +18,28 @@ const IMG = styled.div({
   borderColor: '#aaa',
   borderWidth: 'thin',
   justifySelf: 'center',
-  marginTop: '5rem',
-  // zIndex: '50',
+  backgroundImage: `url('/test.jpg')`,
+  marginTop: '4rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
+    marginTop: '6rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       height: '70vh',
-      marginTop: '0rem',
+      marginTop: '6rem',
       },
 });
 
 const Container = styled.div({
     justifySelf: 'center',
     textAlign: 'center',
-    position: 'sticky',
-    // marginTop: '153rem',
-    // position: 'absolute',
+    paddingTop: '1rem',
     [`@media (min-width: ${breakpoints.md})`]: {
       // marginTop: '208rem',
       width: '80%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      marginTop: '-36rem',
+      // marginTop: '-36rem',
       marginBottom: '6rem',
     },
   });
@@ -77,7 +76,21 @@ const Content = styled.div({
     lineHeight: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '60px',
+    fontSize: '48px',
+  },
+});
+
+const SubContent = styled.div({
+  fontSize: '20px',
+  marginBottom: '1rem',
+  // lineHeight: '1rem',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    textAlign: 'start',
+    fontSize: '25px',
+    lineHeight: '3rem',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    fontSize: '25px',
   },
 });
 
@@ -88,25 +101,18 @@ function ContactForm() {
 
   return (
     <>
-    {(!isMobile && 
     <IMG>
-      <img className="border-borderColor rounded-xl lg:h-full brightness-50" src="/header-contact-form-dbg.jpg" alt="bg" width={2000} /> 
-    </IMG>
-    )}
-
-    {(isTablet && 
-      <IMG>
-      <img className="rounded-2xl" src="/work-header-mbg.png" alt="mobil" width={1000} /> 
-      </IMG>
-    )}
-
     <Container>
         <Title>{HomePageContactFormular.title}</Title>
         <ContentContainer>
-            <Content>{HomePageContactFormular.header} <br /> <span className='text-lg md:text-3xl'>{HomePageContactFormular.subheader}</span></Content>
-            <ContactFormular />
+          <div>
+            <Content>{HomePageContactFormular.header}</Content>
+            <SubContent>{HomePageContactFormular.subheader}</SubContent>
+          </div>
+          <ContactFormular />
         </ContentContainer>
     </Container>
+    </IMG>
     </>
   )
 }
