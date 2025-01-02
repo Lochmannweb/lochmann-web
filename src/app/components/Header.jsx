@@ -48,12 +48,12 @@ const Container = styled.div({
   display: 'grid',
   marginTop: '2rem',
   justifySelf: 'center',
-  marginTop: '12rem',
+  paddingTop: '10rem',
   marginBottom: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     justifySelf: 'center',
     textAlign: 'center',
-    marginTop: '10rem',
+    paddingTop: '10rem',
     marginBottom: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -67,7 +67,7 @@ const HeaderTitle = styled.div({
   textAlign: 'center',
   marginBottom: '0.5rem',
   lineHeight: '2rem',
-  // fontFamily: 'Fantasy',
+  fontFamily: 'Fantasy',
   // Animation
   opacity: '0',
   animation: 'fadeUp 1s ease-in-out forwards',
@@ -84,6 +84,7 @@ const HeaderTitle = styled.div({
     fontSize: '100px',
     lineHeight: '3rem',
     marginTop: '2rem',
+    fontFamily: 'Fantasy',
   },
 });
 

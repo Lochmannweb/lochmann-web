@@ -101,7 +101,7 @@ const Subheader = styled.div({
   fontSize: '30px',
   color: 'white',
   textTransform: 'uppercase',
-  fontFamily: 'fantasy',
+  // fontFamily: 'fantasy',
   marginTop: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '40px',
