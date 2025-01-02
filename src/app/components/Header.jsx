@@ -67,7 +67,7 @@ const HeaderTitle = styled.div({
   textAlign: 'center',
   marginBottom: '0.5rem',
   lineHeight: '2rem',
-  fontFamily: 'Fantasy',
+  // fontFamily: 'Fantasy',
   // Animation
   opacity: '0',
   animation: 'fadeUp 1s ease-in-out forwards',
@@ -77,6 +77,7 @@ const HeaderTitle = styled.div({
     fontSize: '60px',
     lineHeight: '5.5rem',
     marginTop: '-2rem',
+    fontFamily: 'Fantasy',
   },
 
   [`@media (min-width: ${breakpoints.lg})`]: {
