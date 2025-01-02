@@ -53,7 +53,7 @@ const Container = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     justifySelf: 'center',
     textAlign: 'center',
-    marginTop: '01rem',
+    marginTop: '10rem',
     marginBottom: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -214,8 +214,8 @@ const Button = styled.div({
   width: '40%',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '20px',
-    width: '30%',
-    marginTop: '0rem',
+    width: '35%',
+    marginTop: '5rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       marginTop: '6rem',
