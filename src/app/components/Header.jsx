@@ -28,7 +28,7 @@ const IMG = styled.div({
   // borderRadius: '10px',
   // borderColor: '#1c1c1c',
   // borderWidth: 'thin',
-  backgroundImage: `url('/test.png')`,
+  backgroundImage: `url('/test-photoshop.jpg')`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   justifySelf: 'center',
