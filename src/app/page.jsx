@@ -7,6 +7,7 @@ import styled from '@emotion/styled';
 import Feedback from '@/app/components/Feedback'
 import Projects from '@/app/components/Projects'
 import ContactForm from '@/app/components/ContactForm'
+import Banner from '@/app/components/Banner'
 
 const Container = styled.div({
   display: 'grid',
@@ -19,6 +20,7 @@ const Page = () => {
   return (
     <Container> 
       <Header/>
+      <Banner />
       <Tech/>
       <Projects/>
       <Feedback/>

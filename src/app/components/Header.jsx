@@ -2,7 +2,6 @@ import React from "react";
 import { ForsideData } from "../data/ForsideData";
 import styled from '@emotion/styled';
 import "@fontsource/keania-one";
-import Banner from '@/app/components/Banner'
 
 const breakpoints = {
   sm: '699px',
@@ -30,8 +29,8 @@ const IMG = styled.div({
   // borderColor: '#1c1c1c',
   // borderWidth: 'thin',
   backgroundImage: `url('/test.jpg')`,
-  // backgroundSize: 'cover',
-  // backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
   justifySelf: 'center',
   // marginTop: '4rem',
   [`@media (min-width: ${breakpoints.md})`]: {
@@ -57,8 +56,8 @@ const Container = styled.div({
     marginBottom: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    marginTop: '12rem',
-    marginBottom: '3rem',
+    marginTop: '15rem',
+    marginBottom: '5rem',
   },
 });
 
@@ -121,6 +120,9 @@ const ContentContainer = styled.div({
   display: 'grid',
   gap: '1rem', 
   lineHeight: '0rem',
+  // [`@media (min-width: ${breakpoints.lg})`]: {
+  //   marginBotom: '5rem',
+  // },
 });
 
 const Content1 = styled.div`
@@ -212,12 +214,12 @@ const Button = styled.div({
   justifySelf: 'center',
   width: '40%',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '18px',
+    fontSize: '20px',
     width: '30%',
     marginTop: '0rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      marginTop: '3rem',
+      marginTop: '6rem',
       },
 });
 
@@ -234,7 +236,6 @@ export default function Header() {
             <Content2>{ForsideData.content2}</Content2>
             <Content3>{ForsideData.content3}</Content3>
           </ContentContainer>
-          <Banner />
           <Button><a  href="/Contact">GET IN TOUCH</a></Button>
       </Container>
     </IMG>

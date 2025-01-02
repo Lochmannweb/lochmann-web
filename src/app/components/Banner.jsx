@@ -22,17 +22,19 @@ const Container = styled.div({
     gap: '3rem',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    marginTop: '2rem',
+    gap: '5rem',
+    marginTop: '0rem',
    },
 });
 
 const Title = styled.div({
   fontSize: '13px',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '18px',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '25px',
+    fontSize: '20px',
    },
 });
 
@@ -42,10 +44,10 @@ function App() {
   return (
     <>
     <Container>
-      <Title>Built From Scratch</Title>
-      <Title>Redesign</Title>
-      <Title>Branding</Title>
-      <Title>Online Shop</Title>
+      <Title>BUILT FROM SCRATCH</Title>
+      <Title>REDESIGN</Title>
+      <Title>BRANDING</Title>
+      <Title>ONLINE SHOP</Title>
     </Container>
     </>
   );
