@@ -28,7 +28,7 @@ const IMG = styled.div({
   // borderRadius: '10px',
   // borderColor: '#1c1c1c',
   // borderWidth: 'thin',
-  backgroundImage: `url('/test.jpg')`,
+  backgroundImage: `url('/test.png')`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   justifySelf: 'center',
