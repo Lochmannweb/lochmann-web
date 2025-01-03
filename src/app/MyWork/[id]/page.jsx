@@ -3,8 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/app/lib/supabaseClient';
 import styled from '@emotion/styled';
-import { useTheme } from '@mui/material/styles';
-import { useMediaQuery } from '@mui/material';
 
 const breakpoints = {
   sm: '699px',
@@ -155,15 +153,11 @@ const Load = styled.div({
 export default function ImageAndDataPage({ params }) {
   const [fetchError, setFetchError] = useState(null);
   const [selectedLW, setSelectedLW] = useState(null);
-  const [selectedHeaderImage, setSelectedHeaderImage] = useState(null);
-  const [selectedMobileHeaderImage, setSelectedMobileHeaderImage] = useState(null);
-  const [selectedPrototypeImage, setSelectedPrototypeImage] = useState(null);
+  // const [selectedHeaderImage, setSelectedHeaderImage] = useState(null);
+  // const [selectedMobileHeaderImage, setSelectedMobileHeaderImage] = useState(null);
+  // const [selectedPrototypeImage, setSelectedPrototypeImage] = useState(null);
   const [selectedWebImage, setSelectedWebImage] = useState(null);
   const [loadingLW, setLoadingLW] = useState(false);
-
-  const theme = useTheme();
-  const isTablet = useMediaQuery(theme.breakpoints.down('md'));
-  const isMobile = useMediaQuery(theme.breakpoints.down('md'));
 
   useEffect(() => {
     console.log("Fetching data for:", params.id);
@@ -175,22 +169,25 @@ export default function ImageAndDataPage({ params }) {
         const { data: webData, error: webError } = await supabase.storage
           .from('LochmannWeb')
           .download(`${imageBaseName}_WEB`);
+          console.log('Fetching LW data:', imageBaseName);
   
         if (webError) throw webError;
         console.error('Web error:', webError);
         setSelectedWebImage(URL.createObjectURL(webData));
+        console.log('Web Data:', webData);
   
         // Hent LW data
         setLoadingLW(true);
         const { data: lwData, error: lwError } = await supabase
           .from('LW')
           .select('*')
-          .ilike('title', `%${imageBaseName}%`);
+          .ilike('title', `%${imageBaseName}%`); // virker kun med CGC
   
         if (lwError) throw lwError;
   
         if (lwData && lwData.length > 0) {
           setSelectedLW(lwData[0]);
+          console.log('LW Data:', lwData);
         } else {
           console.warn('Ingen LW data fundet for:', imageBaseName);
           setSelectedLW(null);
@@ -205,6 +202,7 @@ export default function ImageAndDataPage({ params }) {
   
     fetchData();
   }, [params.id]);
+
 
   return (
     <>
