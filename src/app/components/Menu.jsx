@@ -25,7 +25,7 @@ const Container = styled.div({
   width: '100%',
   top: '0',
   position: 'fixed',
-  backgroundColor: '#000000bd',
+  backgroundColor: 'black',
   zIndex: '50',
   [`@media (min-width: ${breakpoints.md})`]: {
     borderTopColor: 'black',
@@ -73,16 +73,20 @@ const OpenMenu = styled.div({
 
 const Links = styled.div({
   display: 'grid',
-  paddingBottom: '20px',
+  marginBottom: '20px',
   gap: '10px',
   marginTop: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
     gap: '30px',
+    marginTop: '0.5rem',
+    marginBottom: '0.5rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     display: 'flex',
     gap: '30px',
+    marginTop: '0.8rem',
+    marginBottom: '0.8rem',
   },
 });
 
@@ -93,6 +97,19 @@ const OpenMenuLogoAndIcon = styled.div({
 
 const LinksContainer = styled.div({
   display: 'flex',
+  backgroundColor: 'black',
+  [`@media (min-width: ${breakpoints.md})`]: {
+    backgroundColor: '#121212',
+    justifyContent: 'center',
+    borderRadius: '25px',
+    width: '45%',
+  },
+  [`@media (min-width: ${breakpoints.lg})`]: {
+    backgroundColor: '#121212',
+    justifyContent: 'center',
+    borderRadius: '25px',
+    width: '25%',
+  },
 });
 
 
@@ -131,12 +148,15 @@ function App() {
                 <ul>
                   <Links>
                     <a className='hover:text-hover-menu md:text-xs' href="/About" prefetch={false}>JOURNEY</a>
-                    <a className='hover:text-hover-menu md:text-xs' href="/Services" prefetch={false}>SERVICES</a>
                     <a className='hover:text-hover-menu md:text-xs' href="/MyWork" prefetch={false}>PROCESS TO PROJECT</a>
-                    <a className='hover:text-hover-menu md:text-xs' href="/Contact" prefetch={false}>CONTACT</a>
+                    <a className='hover:text-hover-menu md:text-xs' href="/Services" prefetch={false}>SERVICES</a>
                   </Links>
                 </ul>
             </LinksContainer>
+
+            <div>
+              <a className='hover:text-hover-menu md:text-xs' href="/Contact" prefetch={false}>CONTACT</a>
+            </div>
           </Container>
         </Nav>
       )}

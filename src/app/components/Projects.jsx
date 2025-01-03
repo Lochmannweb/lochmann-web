@@ -17,20 +17,21 @@ const breakpoints = {
   };
 
 const IMG = styled.div({
-  width: '95%',
+  width: '92%',
   marginTop: '5rem', 
   borderRadius: '10px',
-  borderColor: '#6b6b6b',
+  borderColor: '#1c1c1c',
   borderWidth: 'thin',
-  backgroundImage: `url('/test.jpg')`,
+  backgroundImage: `url('/header-dbg.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
+  padding: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
     marginTop: '8rem', 
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      width: '80%',
+      width: '97%',
       height: '70vh',
       marginTop: '10rem',
       },
@@ -47,7 +48,7 @@ const Container = styled.div({
 });
 
 const HeaderContent = styled.div({
-  marginTop: '1rem',
+  // marginTop: '1rem',
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
     alignContent: 'center',
@@ -58,7 +59,7 @@ const HeaderContent = styled.div({
 })
 
 const ImageGrid = styled.div({
-  marginBottom: '1rem',
+  // marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '0rem',
   },
@@ -70,7 +71,7 @@ const ImageGrid = styled.div({
 
 const ImageBox = styled.div({
   transform: 'trasnslate(0%, 0%)',
-  width: '90%',
+  width: '100%',
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '1rem',

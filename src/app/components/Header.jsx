@@ -24,24 +24,24 @@ const fadeUp = `
 `;
 
 const IMG = styled.div({
-  width: '100%',
-  // borderRadius: '10px',
-  // borderColor: '#1c1c1c',
-  // borderWidth: 'thin',
+  width: '92%',
+  borderRadius: '10px',
+  borderColor: '#1c1c1c',
+  borderWidth: 'thin',
   backgroundImage: `url('/test-photoshop.jpg')`,
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   justifySelf: 'center',
-  // marginTop: '4rem',
+  marginTop: '4rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     backgroundImage: `url('/test-photoshop.jpg')`,
-    // width: '95%',
+    width: '95%',
     // backgroundSize: 'contain',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    // width: '95%',
-    // height: '70vh',
-    // marginTop: '6rem',
+    width: '97%',
+    height: '70vh',
+    marginTop: '4rem',
     },
 });
 
@@ -49,16 +49,16 @@ const Container = styled.div({
   display: 'grid',
   marginTop: '2rem',
   justifySelf: 'center',
-  paddingTop: '10rem',
+  paddingTop: '7rem',
   marginBottom: '5rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     justifySelf: 'center',
     textAlign: 'center',
-    paddingTop: '10rem',
+    paddingTop: '3rem',
     marginBottom: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    marginTop: '3rem',
+    marginTop: '7rem',
     marginBottom: '5rem',
   },
 });
@@ -77,14 +77,14 @@ const HeaderTitle = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '60px',
     lineHeight: '5.5rem',
-    marginTop: '-2rem',
+    // marginTop: '-4rem',
     fontFamily: 'Fantasy',
   },
 
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '100px',
     lineHeight: '3rem',
-    marginTop: '2rem',
+    marginTop: '0rem',
     fontFamily: 'Fantasy',
   },
 });
@@ -209,7 +209,7 @@ const Button = styled.div({
   color: 'black',
   fontSize: '13px',
   textAlign: 'center',
-  marginTop: '8rem',
+  marginTop: '7rem',
   marginBottom: '2rem',
   background: 'white',
   borderRadius: '25px',

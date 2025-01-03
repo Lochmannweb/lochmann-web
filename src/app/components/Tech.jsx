@@ -24,11 +24,11 @@ const fadeInFromRight = `
 `;
 
 const IMG = styled.div({
-  width: '95%',
+  width: '92%',
   borderRadius: '10px',
-  borderColor: '#6b6b6b',
+  borderColor: '#1c1c1c',
   borderWidth: 'thin',
-  backgroundImage: `url('/test.jpg')`,
+  backgroundImage: `url('/feedback-3.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
   marginTop: '5rem',
@@ -37,7 +37,7 @@ const IMG = styled.div({
     marginTop: '8rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      width: '80%',
+      width: '97%',
       height: '70vh',
       marginTop: '10rem',
       },
@@ -98,12 +98,12 @@ const Header = styled.div({
 
 const Subheader = styled.div({
   textAlign: 'center',  
-  fontSize: '30px',
-  color: 'white',
-  textTransform: 'uppercase',
+  fontSize: '15px',
+  color: 'gray',
   // fontFamily: 'fantasy',
-  marginTop: '2rem',
+  marginTop: '0rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    color: 'white',
     fontSize: '40px',
     color: 'white',
     fontFamily: 'Fantasy',

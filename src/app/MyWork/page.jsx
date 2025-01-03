@@ -18,7 +18,7 @@ const IMGHeader = styled.div({
   borderRadius: '10px',
   borderColor: '#6b6b6b',
   borderWidth: 'thin',
-  backgroundImage: `url('/header-dbg.jpg')`,
+  backgroundImage: `url('/test-photoshop.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
   marginBottom: '5rem',

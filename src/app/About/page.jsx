@@ -13,11 +13,11 @@ const breakpoints = {
 };
 
 const IMG = styled.div({
-  width: '95%',
+  width: '90%',
   borderRadius: '10px',
   borderColor: '#6b6b6b',
   borderWidth: 'thin',
-  backgroundImage: `url('/test.jpg')`,
+  backgroundImage: `url('/test-photoshop.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
   marginTop: '3.5rem',
@@ -33,7 +33,7 @@ const IMG = styled.div({
 });
 
 const Container = styled.div({
-  padding: '2rem',
+  padding: '1rem',
   top: '4rem',
   // position: 'absolute',
   marginBottom: '5rem',

@@ -10,11 +10,11 @@ const breakpoints = {
   };
 
   const IMG = styled.div({
-    width: '95%',
+    width: '92%',
     borderRadius: '10px',
-    borderColor: '#6b6b6b',
+    borderColor: '#1c1c1c',
     borderWidth: 'thin',
-    backgroundImage: `url('/test.jpg')`,
+    backgroundImage: `url('/header-feedback-dbg.jpg')`,
     justifySelf: 'center',
     backgroundSize: 'cover',
     marginTop: '5rem',
@@ -23,7 +23,7 @@ const breakpoints = {
       marginTop: '8rem',
       },
       [`@media (min-width: ${breakpoints.lg})`]: {
-        width: '80%',
+        width: '97%',
         marginTop: '10rem',
         },
   });
@@ -110,7 +110,7 @@ const breakpoints = {
     borderColor: '#6b6b6b',
     borderWidth: 'thin',
     borderRadius: '15px',
-    backgroundImage: `url('/box-bg.jpg')`,
+    backgroundImage: `url('/box.jpg')`,
     width: '90%',
     // height: '13vh',
     justifySelf: 'center',

@@ -7,6 +7,7 @@ export const ServicesData = {
         subheader2: 'The color palette is neutral, featuring subtle accents that highlight interactive elements. The user experience is streamlined with simple navigation, a clear hierarchy, and a focus on key topics such as expertise, process, and projects.',
         subheader3: 'Animated icons and section transitions add a dynamic touch, while the text structure balances being informative and engaging.',
         subheader4: 'Overall, the website promotes a professional and creative atmosphere, appealing to the target audience for web development and design.',
+        
     },
 
     Programmering: {

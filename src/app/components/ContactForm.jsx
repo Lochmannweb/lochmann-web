@@ -10,12 +10,12 @@ const breakpoints = {
   };
 
 const IMG = styled.div({
-  width: '95%',
+  width: '92%',
   marginTop: '5rem',
   borderRadius: '10px',
-  borderColor: '#6b6b6b',
+  borderColor: '#1c1c1c',
   borderWidth: 'thin',
-  backgroundImage: `url('/test.jpg')`,
+  backgroundImage: `url('/header-work-dbg.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
@@ -23,7 +23,7 @@ const IMG = styled.div({
     marginTop: '8rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      width: '80%',
+      width: '97%',
       height: '70vh',
       marginTop: '10rem',
       },
@@ -42,7 +42,7 @@ const Container = styled.div({
   });
   
 const Title = styled.div({
-  marginBottom: '1rem',
+  // marginBottom: '1rem',
   fontSize: '13px',
   marginTop: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
@@ -65,12 +65,11 @@ const ContentContainer = styled.div({
   });
 
 const ContentHeader = styled.div({
+  fontFamily: 'emoji',
   fontSize: '25px',
   [`@media (min-width: ${breakpoints.md})`]: {
     textAlign: 'start',
     fontSize: '40px',
-    fontFamily: 'fantasy',
-    transform: 'uppercase',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '60px',
@@ -79,11 +78,13 @@ const ContentHeader = styled.div({
 });
 
 const Subheader = styled.div({
-  fontSize: '20px',
+  fontSize: '15px',
+  color: 'gray',
   lineHeight: '1rem',
   marginBottom: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     textAlign: 'start',
+    color: 'white',
     fontSize: '20px',
     lineHeight: '3rem',
   },
