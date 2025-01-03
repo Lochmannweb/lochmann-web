@@ -15,7 +15,7 @@ const IMG = styled.div({
   borderRadius: '10px',
   borderColor: '#1c1c1c',
   borderWidth: 'thin',
-  backgroundImage: `url('/header-work-dbg.jpg')`,
+  backgroundImage: `url('/header-dbg.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
@@ -65,9 +65,11 @@ const ContentContainer = styled.div({
   });
 
 const ContentHeader = styled.div({
-  fontFamily: 'emoji',
   fontSize: '25px',
+  fontFamily: 'fantasy',
+  textTransform: 'uppercase',
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontFamily: 'emoji',
     textAlign: 'start',
     fontSize: '40px',
   },
@@ -84,12 +86,11 @@ const Subheader = styled.div({
   marginBottom: '2rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     textAlign: 'start',
-    color: 'white',
     fontSize: '20px',
     lineHeight: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '30px',
+    fontSize: '22px',
     lineHeight: '4rem',
   },
 });

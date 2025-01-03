@@ -13,7 +13,7 @@ const breakpoints = {
 const IMG = styled.div({
   width: '95%',
   borderRadius: '10px',
-  borderColor: '#6b6b6b',
+  borderColor: '#1c1c1c',
   borderWidth: 'thin',
   backgroundImage: `url('/header-dbg.jpg')`,
   backgroundSize: 'cover',

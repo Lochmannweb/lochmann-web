@@ -24,7 +24,7 @@ const Container = styled.div({
 
 const Box = styled.div({
   backgroundColor: '#000000a3',
-  borderColor: 'gray',
+  borderColor: '#1c1c1c',
   borderRadius: '10px',
   borderWidth: 'thin',
   justifySelf: 'center',

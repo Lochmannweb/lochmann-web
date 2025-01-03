@@ -22,7 +22,8 @@ const IMG = styled.div({
   borderRadius: '10px',
   borderColor: '#1c1c1c',
   borderWidth: 'thin',
-  backgroundImage: `url('/header-dbg.jpg')`,
+  backgroundImage: `url('wave-red.jpg')`,
+  // filter: 'saturate(4)',
   backgroundSize: 'cover',
   justifySelf: 'center',
   padding: '1rem',
@@ -32,7 +33,7 @@ const IMG = styled.div({
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '97%',
-      height: '70vh',
+      // height: '70vh',
       marginTop: '10rem',
       },
 });
@@ -61,10 +62,11 @@ const HeaderContent = styled.div({
 const ImageGrid = styled.div({
   // marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    marginTop: '3rem',
     marginBottom: '0rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    display: 'flex',
+    // display: 'flex',
     gap: '1rem',
   },
 });
@@ -75,9 +77,10 @@ const ImageBox = styled.div({
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
     marginBottom: '1rem',
+    width: '50%'
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    width: '70%',
+    // width: '70%',
   },
 });
 
@@ -152,12 +155,13 @@ const Header = styled.div({
   fontSize: '30px',
   borderRadius: '0px',
   marginBottom: '-0.5rem',
-  fontFamily: 'emoji',
+  fontFamily: 'fantasy',
   textTransform: 'uppercase',
   opacity: ({ inView }) => (inView ? '1' : '0'),
   animation: ({ inView }) =>
     inView ? 'fadeUp 1s ease-in-out 0.4s forwards' : 'none',
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontFamily: 'emoji',
     borderRadius: '0px 100px',
     textAlign: 'center',
     borderColor: '#a100ff',

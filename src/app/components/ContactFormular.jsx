@@ -11,14 +11,14 @@ function ContactForm() {
   return (
     <form className='w-80 md:w-96 grid gap-4 md:mt-0 lg:m-auto' onSubmit={handleSubmit}>
       <div className='grid'>
-        <label htmlFor="text" className='text-start'>
+        <label htmlFor="text" className='text-start uppercase'>
           Company name
         </label>
         <input
           id="text"
           type="text" 
           name="text"
-          className='bg-input border-2 border-bordercolor rounded-lg text-white text-xs p-2 '
+          className='bg-input border rounded-lg text-white text-xs p-2 '
           placeholder='If the website exist'
         />
         <ValidationError 
@@ -29,14 +29,14 @@ function ContactForm() {
       </div>
 
       <div className='grid'>
-        <label htmlFor="text" className='text-start'>
+        <label htmlFor="text" className='text-start uppercase'>
           Full name
         </label>
         <input
           id="text"
           type="text" 
           name="text"
-          className='bg-input border-2 border-bordercolor rounded-lg  text-white text-xs p-2'
+          className='bg-input border rounded-lg  text-white text-xs p-2'
           placeholder='John James'
         />
         <ValidationError 
@@ -47,14 +47,14 @@ function ContactForm() {
       </div>
 
       <div className='grid'>
-        <label htmlFor="tel" className='text-start'>
+        <label htmlFor="tel" className='text-start uppercase'>
           Contact number
         </label>
         <input
           id="tel"
           type="tel" 
           name="tel"
-          className='bg-input border-2 border-bordercolor rounded-lg text-white text-xs p-2'
+          className='bg-input border rounded-lg text-white text-xs p-2'
           placeholder='+XX XX XX XX XX'
         />
         <ValidationError 
@@ -65,14 +65,14 @@ function ContactForm() {
       </div>
 
       <div className='grid'>
-        <label htmlFor="email" className='text-start' >
+        <label htmlFor="email" className='text-start uppercase' >
           Email Address
         </label>
         <input
           id="email"
           type="email" 
           name="email"
-          className='bg-input border-2 border-bordercolor rounded-lg text-white text-xs p-2'
+          className='bg-input border rounded-lg text-white text-xs p-2'
           placeholder='example@example.com'
         />
         <ValidationError 
@@ -83,13 +83,13 @@ function ContactForm() {
       </div>
 
       <div className='grid'>
-        <label htmlFor="message" className='text-start' >
+        <label htmlFor="message" className='text-start uppercase' >
           Message
         </label>
         <textarea
           id="message"
           name="message"
-          className='bg-input border-2 border-bordercolor rounded-lg text-white text-xs p-2'
+          className='bg-input border rounded-lg text-white text-xs p-2'
         />
         <ValidationError 
           prefix="Message" 

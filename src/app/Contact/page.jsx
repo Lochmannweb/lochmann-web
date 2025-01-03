@@ -15,10 +15,11 @@ const breakpoints = {
 const IMG = styled.div({
   width: '92%',
   borderRadius: '15px',
-  borderColor: '#aaa',
+  borderColor: '#1c1c1c',
   borderWidth: 'thin',
   justifySelf: 'center',
-  backgroundImage: `url('/test.jpg')`,
+  backgroundImage: `url('/header-dbg.jpg')`,
+  backgroundSize: 'cover',
   marginTop: '4rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%',
@@ -83,6 +84,7 @@ const Content = styled.div({
 const SubContent = styled.div({
   fontSize: '20px',
   marginBottom: '1rem',
+  color: 'gray',
   // lineHeight: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     textAlign: 'start',
@@ -90,7 +92,7 @@ const SubContent = styled.div({
     lineHeight: '3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '25px',
+    fontSize: '22px',
   },
 });
 

@@ -99,13 +99,13 @@ const LinksContainer = styled.div({
   display: 'flex',
   backgroundColor: 'black',
   [`@media (min-width: ${breakpoints.md})`]: {
-    backgroundColor: '#121212',
+    background: 'linear-gradient(0deg, #4d3d39, #ffffff00)',
     justifyContent: 'center',
     borderRadius: '25px',
     width: '45%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    backgroundColor: '#121212',
+    background: 'linear-gradient(0deg, #4d3d39, #ffffff00)',
     justifyContent: 'center',
     borderRadius: '25px',
     width: '25%',

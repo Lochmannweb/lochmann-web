@@ -14,7 +14,7 @@ const breakpoints = {
     borderRadius: '10px',
     borderColor: '#1c1c1c',
     borderWidth: 'thin',
-    backgroundImage: `url('/header-feedback-dbg.jpg')`,
+    backgroundImage: `url('/klipper-bg.jpg')`,
     justifySelf: 'center',
     backgroundSize: 'cover',
     marginTop: '5rem',
@@ -54,12 +54,13 @@ const breakpoints = {
 
   const Header = styled.div({
     fontSize: '30px',
-    fontFamily: 'Emoji',
     textAlign: 'center',
     borderRadius: '0px',
     marginBottom: '0.5rem',
+    fontFamily: 'fantasy',
     textTransform: 'uppercase',
     [`@media (min-width: ${breakpoints.md})`]: {
+      fontFamily: 'emoji',
       textAlign: 'center',
       borderColor: '#A100FF',
       borderRadius: '0px 100px',
@@ -110,7 +111,7 @@ const breakpoints = {
     borderColor: '#6b6b6b',
     borderWidth: 'thin',
     borderRadius: '15px',
-    backgroundImage: `url('/box.jpg')`,
+    backgroundImage: `url('/klipper-black-bg.jpg')`,
     width: '90%',
     // height: '13vh',
     justifySelf: 'center',

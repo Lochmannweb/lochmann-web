@@ -28,7 +28,8 @@ const IMG = styled.div({
   borderRadius: '10px',
   borderColor: '#1c1c1c',
   borderWidth: 'thin',
-  backgroundImage: `url('/feedback-3.jpg')`,
+  backgroundImage: `url('/t-header.jpg')`,
+  // filter: 'saturate(4)',
   backgroundSize: 'cover',
   justifySelf: 'center',
   marginTop: '5rem',
@@ -38,7 +39,7 @@ const IMG = styled.div({
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '97%',
-      height: '70vh',
+      // height: '70vh',
       marginTop: '10rem',
       },
 });
@@ -83,9 +84,10 @@ const Header = styled.div({
   textAlign: 'center',
   borderRadius: '0px',
   marginBottom: '-0.5rem',
-  fontFamily: 'Emoji',
+  fontFamily: 'fantasy',
   textTransform: 'uppercase',
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontFamily: 'Emoji',
     textAlign: 'center',
     borderRadius: '0px 70px',
     borderColor: '#A100FF',

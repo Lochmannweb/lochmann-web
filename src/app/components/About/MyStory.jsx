@@ -44,7 +44,7 @@ const Title = styled.div({
 
 const Content = styled.div({
   fontSize: '15px',
-  color: 'gray',
+  color: '#9b9b9b',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '80%',
     alignItems: 'center',

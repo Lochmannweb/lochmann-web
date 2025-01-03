@@ -28,13 +28,14 @@ const IMG = styled.div({
   borderRadius: '10px',
   borderColor: '#1c1c1c',
   borderWidth: 'thin',
-  backgroundImage: `url('/test-photoshop.jpg')`,
+  backgroundImage: `url('/glas-bg.jpg')`,
+  // filter: 'saturate(4)',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   justifySelf: 'center',
   marginTop: '4rem',
   [`@media (min-width: ${breakpoints.md})`]: {
-    backgroundImage: `url('/test-photoshop.jpg')`,
+    backgroundImage: `url('/glas-bg.jpg')`,
     width: '95%',
     // backgroundSize: 'contain',
     },
@@ -206,18 +207,26 @@ const Content3 = styled.div`
 `;
 
 const Button = styled.div({
-  color: 'black',
+  color: 'white',
   fontSize: '13px',
   textAlign: 'center',
   marginTop: '7rem',
   marginBottom: '2rem',
-  background: 'white',
+  borderColor: 'white',
+  borderRadius: '25px',
+  borderWidth: 'thin',
+  // background: 'white',
   borderRadius: '25px',
   justifySelf: 'center',
   width: '40%',
+  ':hover': {
+    borderColor: 'gray',
+    color: 'gray',
+  },
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '20px',
-    width: '35%',
+    fontSize: '15px',
+    padding: '0.3rem',
+    width: '25%',
     marginTop: '5rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {

@@ -15,9 +15,9 @@ const breakpoints = {
 const IMG = styled.div({
   width: '90%',
   borderRadius: '10px',
-  borderColor: '#6b6b6b',
+  borderColor: '#1c1c1c',
   borderWidth: 'thin',
-  backgroundImage: `url('/test-photoshop.jpg')`,
+  backgroundImage: `url('/glas-bg.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
   marginTop: '3.5rem',

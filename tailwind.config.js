@@ -23,7 +23,7 @@ module.exports = {
       'inputFilter': 'black',
       'inputBG': '#090909',
       'brown': '#59372A',
-      'borderColor': '#FFF4D2',
+      'borderColor': '#1c1c1c',
     },
     extend: {
       backgroundImage: {
