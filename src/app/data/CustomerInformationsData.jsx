@@ -4,6 +4,6 @@ export const CustomerInformationsData = {
         content: "Hedehusene, Denmark",
     },
     about: {
-        title: "2024",
+        title: "CVR: 45296997",
     },
 }
