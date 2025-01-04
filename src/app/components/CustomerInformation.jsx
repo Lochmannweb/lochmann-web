@@ -16,6 +16,7 @@ const Container = styled.div({
     display: 'flex',
     justifyContent: 'space-between',
     marginBottom: '4rem',
+    fontFamily: 'emoji',
     marginTop: '5rem',
     [`@media (min-width: ${breakpoints.md})`]: {
       width: '96%',

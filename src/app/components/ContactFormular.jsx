@@ -99,8 +99,8 @@ function ContactForm() {
       </div>
 
       <div className='flex justify-end'>
-        <button type="submit" className=' bg-white font-bold hover:bg-gray hover:text-white text-black w-20 rounded-lg mb-4' disabled={state.submitting}>
-          Send
+        <button type="submit" className=' bg-white font-emoji uppercase border-b-gray border hover:bg-black hover:text-white text-black w-20 rounded-xl mb-4' disabled={state.submitting}>
+          SEND
         </button>
       </div>
     </form>

@@ -26,6 +26,7 @@ const Container = styled.div({
   top: '0',
   position: 'fixed',
   backgroundColor: 'black',
+  fontFamily: 'emoji',
   zIndex: '50',
   [`@media (min-width: ${breakpoints.md})`]: {
     borderTopColor: 'black',
@@ -99,13 +100,14 @@ const LinksContainer = styled.div({
   display: 'flex',
   backgroundColor: 'black',
   [`@media (min-width: ${breakpoints.md})`]: {
-    background: 'linear-gradient(0deg, #4d3d39, #ffffff00)',
+    background: 'linear-gradient(0deg, #915d5d, #ffffff00)',
     justifyContent: 'center',
     borderRadius: '25px',
+    marginLeft: '-4rem',
     width: '45%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    background: 'linear-gradient(0deg, #4d3d39, #ffffff00)',
+    background: 'linear-gradient(0deg, #915d5d, #ffffff00)',
     justifyContent: 'center',
     borderRadius: '25px',
     width: '25%',

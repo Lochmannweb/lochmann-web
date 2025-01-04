@@ -67,9 +67,12 @@ const Container = styled.div({
 const HeaderTitle = styled.div({
   fontSize: '35px',
   textAlign: 'center',
+  justifySelf: 'center',
   marginBottom: '0.5rem',
   lineHeight: '2rem',
   fontFamily: 'Fantasy',
+  width: '70%',
+
   // Animation
   opacity: '0',
   animation: 'fadeUp 1s ease-in-out forwards',
@@ -78,51 +81,54 @@ const HeaderTitle = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '60px',
     lineHeight: '5.5rem',
+    width: '80%',
     // marginTop: '-4rem',
     fontFamily: 'Fantasy',
   },
 
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '100px',
-    lineHeight: '3rem',
+    width: '80%',
+    lineHeight: '5.5rem',
     marginTop: '0rem',
     fontFamily: 'Fantasy',
-  },
-});
-
-
-const Subheader = styled.div({
-  fontSize: '35px',
-  textAlign: 'center',
-  marginBottom: '0.5rem',
-  lineHeight: '2rem',
-  fontFamily: 'Fantasy',
-
-  // Animation
-  opacity: '0', 
-  animation: 'fadeUp 1s ease-in-out forwards',
-  animationDelay: '1s',
-  ...fadeUp,
-
-  [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '60px',
-    lineHeight: '5.5rem',
-    marginTop: '-2rem',
-  },
-
-  [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '100px',
-    lineHeight: '3rem',
-    marginTop: '2rem',
     marginBottom: '2rem',
-  }
+  },
 });
+
+
+// const Subheader = styled.div({
+//   fontSize: '35px',
+//   textAlign: 'center',
+//   marginBottom: '0.5rem',
+//   lineHeight: '2rem',
+//   fontFamily: 'Fantasy',
+
+//   // Animation
+//   opacity: '0', 
+//   animation: 'fadeUp 1s ease-in-out forwards',
+//   animationDelay: '1s',
+//   ...fadeUp,
+
+//   [`@media (min-width: ${breakpoints.md})`]: {
+//     fontSize: '60px',
+//     lineHeight: '5.5rem',
+//     marginTop: '-2rem',
+//   },
+
+//   [`@media (min-width: ${breakpoints.lg})`]: {
+//     fontSize: '100px',
+//     lineHeight: '3rem',
+//     marginTop: '2rem',
+//   }
+// });
 
 
 const ContentContainer = styled.div({
   display: 'grid',
   gap: '1rem', 
   lineHeight: '0rem',
+  fontFamily: 'emoji',
   // [`@media (min-width: ${breakpoints.lg})`]: {
   //   marginBotom: '5rem',
   // },
@@ -207,7 +213,7 @@ const Content3 = styled.div`
 `;
 
 const Button = styled.div({
-  color: 'white',
+  color: 'black',
   fontSize: '13px',
   textAlign: 'center',
   marginTop: '7rem',
@@ -215,22 +221,25 @@ const Button = styled.div({
   borderColor: 'white',
   borderRadius: '25px',
   borderWidth: 'thin',
-  // background: 'white',
+  background: 'white',
   borderRadius: '25px',
   justifySelf: 'center',
+  fontFamily: 'emoji',
   width: '40%',
   ':hover': {
-    borderColor: 'gray',
-    color: 'gray',
+    borderColor: 'white',
+    background: 'black',
+    color: 'white',
   },
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '15px',
+    fontSize: '20px',
     padding: '0.3rem',
     width: '25%',
     marginTop: '5rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       marginTop: '6rem',
+      width: '15%',
       },
 });
 
@@ -241,7 +250,6 @@ export default function Header() {
     <IMG>
       <Container>
           <HeaderTitle>{ForsideData.subheader}</HeaderTitle>
-          <Subheader>{ForsideData.subheader2}</Subheader>
           <ContentContainer>
             <Content1>{ForsideData.content}</Content1>
             <Content2>{ForsideData.content2}</Content2>

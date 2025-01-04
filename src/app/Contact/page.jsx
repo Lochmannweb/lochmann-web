@@ -48,6 +48,7 @@ const Container = styled.div({
 const Title = styled.div({
   marginBottom: '1rem',
   fontSize: '13px',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -85,6 +86,7 @@ const SubContent = styled.div({
   fontSize: '20px',
   marginBottom: '1rem',
   color: 'gray',
+  fontFamily: 'emoji',
   // lineHeight: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     textAlign: 'start',

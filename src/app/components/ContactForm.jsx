@@ -45,6 +45,7 @@ const Title = styled.div({
   // marginBottom: '1rem',
   fontSize: '13px',
   marginTop: '1rem',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '20px',
   },
@@ -69,7 +70,7 @@ const ContentHeader = styled.div({
   fontFamily: 'fantasy',
   textTransform: 'uppercase',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontFamily: 'emoji',
+    // fontFamily: 'emoji',
     textAlign: 'start',
     fontSize: '40px',
   },
@@ -84,6 +85,7 @@ const Subheader = styled.div({
   color: 'gray',
   lineHeight: '1rem',
   marginBottom: '2rem',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     textAlign: 'start',
     fontSize: '20px',

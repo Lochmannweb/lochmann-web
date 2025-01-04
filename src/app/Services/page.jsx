@@ -59,9 +59,10 @@ const Title = styled.div({
   fontSize: '30px',
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '60px',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    fontSize: '80px',
+    fontSize: '100px',
   },
 })
 
@@ -69,6 +70,7 @@ const Subheader = styled.div({
   textAlign: 'center',
   color: 'gray',
   margin: 'auto',
+  fontFamily: 'emoji',
     [`@media (min-width: ${breakpoints.md})`]: {
       fontSize: '20px',
     },
@@ -86,7 +88,7 @@ const Content = styled.div({
 const ContentTitle = styled.div({
     fontSize: '30px',
     justifySelf: 'center',
-    // transform: 'uppercase',
+    textTransform: 'uppercase',
     fontFamily: 'emoji',
     [`@media (min-width: ${breakpoints.md})`]: {
     },
@@ -101,11 +103,13 @@ const ContentSubheader = styled.div({
     textAlign: 'center',
     color: 'gray',
     margin: 'auto',
+    fontFamily: 'emoji',
     [`@media (min-width: ${breakpoints.md})`]: {
+      width: '80%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       fontSize: '20px',
-      width: '80%',
+      width: '80%', 
     },
   })
 
@@ -138,6 +142,8 @@ const DesignContainer = styled.div({
   })
 
 const DesignContainerTtitle = styled.div({
+  fontFamily: 'emoji',
+  textTransform: 'uppercase',
     [`@media (min-width: ${breakpoints.md})`]: {
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
@@ -146,6 +152,7 @@ const DesignContainerTtitle = styled.div({
 
 const DesignContainerContent = styled.div({
   color: 'gray',
+  fontFamily: 'emoji',
     [`@media (min-width: ${breakpoints.md})`]: {
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
@@ -159,7 +166,7 @@ const Aboutpage = () => {
     <IMG>
         <Header>
             <Title>SERVICES</Title>
-            <Subheader>{ServicesData.subheader}</Subheader>
+            {/* <Subheader>{ServicesData.subheader}</Subheader> */}
         </Header>
     </IMG>
 

@@ -99,25 +99,26 @@ const Button = styled.div({
   fontSize: '15px',
   color: 'black',
   margin: 'auto',
-  width: '30%',
-  // fontWeight: 'bold',
-  // padding: '0.3rem',
+  width: '40%',
   borderRadius: '50px',
   textAlign: 'center',
   marginTop: '1rem',
+  textTransform: 'uppercase',
+  fontFamily: 'emoji',
   ':hover': {
-    background: 'gray',
+    background: 'black',
+    borderColor: 'white',
+    borderWidth: 'thin',
     color: 'white',
   },
   [`@media (min-width: ${breakpoints.md})`]: {
-    // padding: '0.5rem',
     fontSize: '20px',
     width: '25%',
     marginTop: '2rem',
+    padding: '0.3rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '15%',
-    padding: '0.5rem',
     borderRadius: '25px',
     marginTop: '2rem',
   },
@@ -139,6 +140,7 @@ const fadeUp = `
 const Title = styled.div({
   fontSize: '13px',
   marginBottom: '0rem',
+  fontFamily: 'emoji',
   opacity: ({ inView }) => (inView ? '1' : '0'),
   animation: ({ inView }) =>
     inView ? 'fadeUp 1s ease-in-out 0.2s forwards' : 'none',
@@ -161,7 +163,7 @@ const Header = styled.div({
   animation: ({ inView }) =>
     inView ? 'fadeUp 1s ease-in-out 0.4s forwards' : 'none',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontFamily: 'emoji',
+    // fontFamily: 'emoji',
     borderRadius: '0px 100px',
     textAlign: 'center',
     borderColor: '#a100ff',
@@ -177,6 +179,7 @@ const Content = styled.div({
   fontSize: '13px',
   borderRadius: '0px',
   marginBottom: '1rem',
+  fontFamily: 'emoji',
   color: 'gray',
   opacity: ({ inView }) => (inView ? '1' : '0'),
   animation: ({ inView }) =>

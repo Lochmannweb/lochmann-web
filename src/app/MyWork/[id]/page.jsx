@@ -85,7 +85,8 @@ const Content = styled.div({
 
 const ContentTitle = styled.div({
   fontSize: '25px',
-  fontWeight: 'bold',
+  fontFamily: 'emoji',
+  textTransform: 'uppercase',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -103,7 +104,7 @@ const Box = styled.div({
 });
 
 const ContentBoxTitle = styled.div({
-  fontWeight: 'bold',
+  textTransform: 'uppercase',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -129,15 +130,19 @@ const Button = styled.div({
   textAlign: 'center',
   marginTop: '1rem',
   marginRight: '1rem',
+  textTransform: 'uppercase',
     ':hover': {
-    background: 'gray',
+    borderColor: 'white',
+    borderWidth: 'thin',
+    background: 'black',
     color: 'white',
   },
   [`@media (min-width: ${breakpoints.md})`]: {
+    padding: '0.3rem',
     width: '30%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    width: '18%',
+    width: '15%',
     marginTop: '1rem',
     marginRight: '3rem',
   },

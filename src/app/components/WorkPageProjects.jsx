@@ -17,8 +17,8 @@ const Container = styled.div({
   justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
     justifyItems: 'center',
-    display: 'flex',
-    gap: '1rem',
+    display: 'grid',
+    gap: '2rem',
   },
 });
 

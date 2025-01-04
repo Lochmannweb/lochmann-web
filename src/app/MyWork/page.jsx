@@ -23,9 +23,10 @@ const IMGHeader = styled.div({
   justifySelf: 'center',
   marginBottom: '5rem',
   marginTop: '4rem',
+  padding: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '95%', 
-    marginTop: '6rem',
+    // marginTop: '6rem',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '95%',
@@ -43,12 +44,14 @@ const IMG = styled.div({
   backgroundImage: `url('/header-dbg.jpg')`,
   backgroundSize: 'cover',
   justifySelf: 'center',
+  padding: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    padding: '5rem',
     width: '95%',
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '95%',
-      height: '160vh',
+      // height: '160vh',
       },
 });
 
@@ -61,7 +64,7 @@ const Header = styled.div({
     width: '85%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    marginTop: '7rem',
+    marginTop: '9rem',
   },
 });
 
@@ -70,7 +73,7 @@ const Title = styled.div({
   transform: 'uppercase',
   fontSize: '30px',
   [`@media (min-width: ${breakpoints.md})`]: {
-    fontSize: '40px',
+    fontSize: '55px',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '100px',
@@ -79,29 +82,38 @@ const Title = styled.div({
 
 const Subheader = styled.div({
   color: 'gray',
+  fontFamily: 'emoji',
+  justifySelf: 'center',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
+    width: '80%',
     fontSize: '20px',
   },
 });
 
-const Container = styled.div({
-  justifySelf: 'center',
-  padding: '1rem',
-  textAlign: 'center',
-  [`@media (min-width: ${breakpoints.md})`]: {
-  },
-  [`@media (min-width: ${breakpoints.lg})`]: {
-    marginTop: '1rem',
-  },
-});
+// const Container = styled.div({
+//   justifySelf: 'center',
+//   padding: '1rem',
+//   textAlign: 'center',
+//   [`@media (min-width: ${breakpoints.md})`]: {
+//   },
+//   [`@media (min-width: ${breakpoints.lg})`]: {
+//     // marginTop: '1rem',
+//   },
+// });
 
 const ProcessTitle = styled.div({
   justifySelf: 'center',
+  textAlign: 'center',
   fontFamily: 'emoji',
-  fontSize: '30px',
+  fontSize: '29px',
+  textTransform: 'uppercase',
+  marginBottom: '1rem',
   [`@media (min-width: ${breakpoints.md})`]: {
+    fontSize: '50px',
+    marginBottom: '2rem',
+    marginTop: '2rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '80px',
@@ -112,6 +124,7 @@ const ProcessSubheader = styled.div({
   justifySelf: 'center',
   color: 'gray',
   marginBottom: '2rem',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
@@ -130,16 +143,20 @@ const Button = styled.div({
   justifySelf: 'center',
   backgroundColor: 'white',
   marginBottom: '5rem',
+  textTransform: 'uppercase',
+  fontFamily: 'emoji',
   ':hover': {
-    background: 'gray',
+    borderColor: 'white',
+    borderWidth: 'thin',
+    background: 'black',
     color: 'white',
   },
     [`@media (min-width: ${breakpoints.md})`]: {
       marginTop: '3rem',
       width: '25%',
-      padding: '0.5rem',
+      padding: '0.3rem',
       fontSize: '15px',
-      width: '50%',
+      width: '20%',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
       width: '15%',
@@ -152,7 +169,8 @@ const ProjectsTitle = styled.div({
   justifySelf: 'center',
   fontFamily: 'emoji',
   fontSize: '30px',
-  marginTop: '1rem',
+  // marginTop: '1rem',
+  textTransform: 'uppercase',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '60px',
   },
@@ -171,16 +189,14 @@ const Aboutpage = () => {
     <IMGHeader>
       <Header>
           <Title>{MyWorkHeader.title}</Title> 
-          <Subheader>{MyWorkHeader.subheader}</Subheader>
+          {/* <Subheader>{MyWorkHeader.subheader}</Subheader> */}
       </Header>
     </IMGHeader>
 
     <IMG>
-      <Container>
         <ProcessTitle>{MyWorkHeader.processTitle}</ProcessTitle>
-        <ProcessSubheader>{MyWorkHeader.processSubheader}</ProcessSubheader>
+        {/* <ProcessSubheader>{MyWorkHeader.processSubheader}</ProcessSubheader> */}
         <StepByStep />
-      </Container>
     </IMG>  
     <Button><a href="/Contact">Get In Touch</a></Button>
 

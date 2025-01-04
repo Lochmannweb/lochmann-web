@@ -19,7 +19,7 @@ const Container = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
     justifyContent: 'center',
-    gap: '8rem',
+    gap: '0rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     marginTop: '0rem',
@@ -32,7 +32,7 @@ const Title = styled.div({
   fontSize: '25px',
   // margin: 'auto',
   display: 'contents',
-  transform: 'uppercase',
+  textTransform: 'uppercase',
   fontFamily: 'Emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '40px',
@@ -45,9 +45,11 @@ const Title = styled.div({
 const Content = styled.div({
   fontSize: '15px',
   color: '#9b9b9b',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     width: '80%',
     alignItems: 'center',
+    fontSize: '20px',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '40%',

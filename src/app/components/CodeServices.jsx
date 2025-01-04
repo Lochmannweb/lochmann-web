@@ -15,16 +15,17 @@ const breakpoints = {
 
 const Container = styled.div({
   margin: 'auto',
+  marginBottom: '3rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
-    justifyContent: 'center',
-    gap: '8rem',
+    justifyContent: 'start',
+    gap: '10rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    // marginTop: '0rem',
+    marginTop: '0rem',
     marginBottom: '10rem',
-    // width: '90%',
-    gap: '20rem',
+    paddingLeft: '2.5rem',
+    gap: '25.5rem',
   },
 });
 
@@ -32,6 +33,7 @@ const Title = styled.div({
   fontSize: '30px',
   margin: 'auto',
   display: 'contents',
+  textTransform: 'uppercase',
   fontFamily: 'Emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '40px',
@@ -44,9 +46,10 @@ const Title = styled.div({
 const Content = styled.div({
   fontSize: '15px',
   color: '#9b9b9b',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
-    alignItems: 'center',
-    width: '54%',
+    fontSize: '20px',
+    // width: '76%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '40%',

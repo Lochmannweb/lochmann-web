@@ -13,27 +13,27 @@ export const StepByStep = {
     title: "Step-by-Step Proces",
     contact: {
         title: "1. Initial Consultation & Requirements Gathering",
-        content: "You & I begin with a conversation to understand your needs and vision.",
-    },
-    tilbudKontrakt: {
-        title: "2. Offer & contract",
-        content: "You will receive a clear and detailed proposal, enabling us to get started.",
+        content: "We start with a conversation to understand your vision.",
     },
     planlægning: {
-        title: "3. Design plan",
-        content: "I will create a draft and design for your website, giving you the opportunity to share your feedback.",
+      title: "2. Design plan",
+      content: "I will create a layout, giving you the opportunity to share your feedback.",
+    },
+    tilbudKontrakt: {
+        title: "3. Offer & contract",
+        content: "Clear and detailed proposal, enabling to get started.",
     },
     preview: {
         title: "4. Preview",
-        content: "hvdjskighnkjlgfnkhblædmj",
+        content: "Based on the design plan, a preview will be created, and we will collaborate on improvements until the design meets expectations.",
     },
     develop: {
         title: "5. Development",
-        content: "The code is written, and we build your website from the ground up or implement a redesign.",
+        content: "Once the preview is approved, the development of the website will begin.",
     },
     test: {
         title: "6. Test",
-        content: "hvdjskighnkjlgfnkhblædmj",
+        content: "Once the functionality and fine-tuning of the website are completed, thorough testing will be conducted to identify and address any potential issues.",
     },
     lancing: {
       title: "7. Lancing",
@@ -41,7 +41,7 @@ export const StepByStep = {
     },
     maintenance: {
       title: "8. Maintenance & support",
-      content: "I ensure your website remains updated and performs at its best.",
+      content: "I ensure that your website remains updated and performs at its best, within the framework of the contract.",
     },
     button: "Let's get started",
 }
@@ -50,7 +50,7 @@ export const StepByStep = {
 export const RecentWorkData = {
     title: "Work",
     header: "My Recent Projects",
-    content: "I help startups and businesses design and develop modern, user-friendly websites, whether starting from scratch or through a complete redesign, ensuring they align perfectly with your goals and vision.",
+    content: "I specialize in helping startups and businesses design and develop modern, user-friendly websites. Whether you need a brand-new site or a complete redesign, I ensure every detail aligns seamlessly with your goals and vision.",
     button: "See More",
     projects: [
       {

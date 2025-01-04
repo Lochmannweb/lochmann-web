@@ -49,11 +49,12 @@ const Title = styled.div({
   textAlign: 'start',
   color: 'white',
   fontFamily: 'emoji',
+  textTransform: 'uppercase',
     [`@media (min-width: ${breakpoints.md})`]: {
-      fontSize: '25px',
+      fontSize: '20px',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      fontSize: '25px',
+      fontSize: '20px',
       },
 });
 
@@ -62,12 +63,13 @@ const Content = styled.div({
     textAlign: 'start',
     width: '90%',
     color: 'gray',
+    fontFamily: 'emoji',
     [`@media (min-width: ${breakpoints.md})`]: {
       margin: 'auto',
       fontSize: '16px',
       },
     [`@media (min-width: ${breakpoints.lg})`]: {
-      fontSize: '16px',
+      fontSize: '20px',
       },
   });
 
@@ -85,18 +87,18 @@ const Aboutpage = () => {
         </Box>
 
         <Box> 
-          <img src="/contract.svg" alt="" width={60} />
-          <div>
-            <Title>{StepByStep.tilbudKontrakt.title}</Title>
-            <Content>{StepByStep.tilbudKontrakt.content}</Content>
-          </div>
-        </Box>
-
-        <Box> 
           <img src="/blueprint.svg" alt="" width={60} />
           <div>
             <Title>{StepByStep.planlægning.title}</Title>
             <Content>{StepByStep.planlægning.content}</Content>
+          </div>
+        </Box>
+
+        <Box> 
+          <img src="/contract.svg" alt="" width={60} />
+          <div>
+            <Title>{StepByStep.tilbudKontrakt.title}</Title>
+            <Content>{StepByStep.tilbudKontrakt.content}</Content>
           </div>
         </Box>
 

@@ -17,7 +17,7 @@ const Title = styled.div({
   fontSize: '30px',
   margin: 'auto',
   display: 'contents',
-  transform: 'uppercase',
+  textTransform: 'uppercase',
   fontFamily: 'Emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '40px',
@@ -33,7 +33,7 @@ const Container = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     display: 'flex',
     justifyContent: 'center',
-    gap: '8rem',
+    gap: '5.5rem',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     marginTop: '0rem',
@@ -45,8 +45,10 @@ const Container = styled.div({
 const Content = styled.div({
   fontSize: '15px',
   color: '#9b9b9b',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
-    width: '76%',
+    fontSize: '20px',
+    // width: '76%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '40%',

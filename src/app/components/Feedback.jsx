@@ -43,6 +43,7 @@ const breakpoints = {
     textAlign: 'center',
     borderRadius: '0px',
     marginTop: '0.5rem',
+    fontFamily: 'emoji',
     [`@media (min-width: ${breakpoints.md})`]: {
       textAlign: 'center',
       borderColor: '#A100FF',
@@ -60,7 +61,7 @@ const breakpoints = {
     fontFamily: 'fantasy',
     textTransform: 'uppercase',
     [`@media (min-width: ${breakpoints.md})`]: {
-      fontFamily: 'emoji',
+      // fontFamily: 'emoji',
       textAlign: 'center',
       borderColor: '#A100FF',
       borderRadius: '0px 100px',
@@ -77,6 +78,7 @@ const breakpoints = {
     fontSize: '15px',
     padding: '2rem',
     marginTop: '-3rem',
+    fontFamily: 'emoji',
     color: 'gray',
     [`@media (min-width: ${breakpoints.md})`]: {
       textAlign: 'center',  
@@ -128,6 +130,7 @@ const breakpoints = {
     textAlign: 'start',  
     fontSize: '20px',
     marginBottom: '-0.5rem',
+    fontFamily: 'fantasy',
     [`@media (min-width: ${breakpoints.md})`]: {
       fontSize: '20px',
     },
@@ -137,6 +140,7 @@ const breakpoints = {
     fontSize: '13px',
     color: 'gray',
     marginTop: '1rem',
+    fontFamily: 'emoji',
      [`@media (min-width: ${breakpoints.md})`]: {
       fontSize: '20px',
       // paddingRight: '5rem',
@@ -156,7 +160,7 @@ function Feedback() {
         </div>
         <Content>
           <FeedBackContainer>
-              <img className='md:m-0' src="/settings.svg" alt="svg" width={60} />
+              <img className='md:m-0' src="/nanotechnology.svg" alt="svg" width={60} />
               <FeedBackContentTtitle className=' md:text-xl md:mt-5'>{FeedbackData.Tech.title}</FeedBackContentTtitle> 
               <FeedbackContent>{FeedbackData.Tech.feedback}</FeedbackContent>
           </FeedBackContainer>

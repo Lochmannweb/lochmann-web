@@ -71,6 +71,7 @@ const Title = styled.div({
   textAlign: 'center',
   borderRadius: '0px',
   marginBottom: '0rem',
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     textAlign: 'center',
     borderRadius: '0px 70px',
@@ -102,20 +103,20 @@ const Subheader = styled.div({
   textAlign: 'center',  
   fontSize: '15px',
   color: 'gray',
-  // fontFamily: 'fantasy',
+  fontFamily: 'emoji',
   marginTop: '0rem',
   [`@media (min-width: ${breakpoints.md})`]: {
     color: 'white',
     fontSize: '40px',
     color: 'white',
-    fontFamily: 'Fantasy',
+    // fontFamily: 'Emoji',
     textAlign: 'start',
     width: '67%',
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
     fontSize: '70px',
     color: 'white',
-    fontFamily: 'Fantasy',
+    // fontFamily: 'Fantasy',
     textAlign: 'start',
     marginTop: '0rem',
   },
@@ -208,28 +209,33 @@ const ExpertiseContent3 = styled.div({
 });
 
 const ExpertiseContentText = styled.div({
+  fontFamily: 'emoji',
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '30px',
   },
 });
 
 const Button = styled.div({
-  // padding: '0.5rem',
+  textTransform: 'uppercase',
   borderRadius: '20px',
   textAlign: 'center',
   fontSize: '15px',
-  width: '30%',
+  width: '40%',
   justifySelf: 'center',
   marginTop: '1rem',
+  fontFamily: 'emoji',
   color: 'black',
   backgroundColor: 'white',
   // fontWeight: 'bold',
   ':hover': {
-    background: 'gray',
+    background: 'black',
+    borderColor: 'white',
+    borderWidth: 'thin',
     color: 'white',
   },
   [`@media (min-width: ${breakpoints.md})`]: {
     fontSize: '20px',
+    padding: '0.3rem',
     margin: 'auto',
     width: '25%',
     marginTop: '2rem',
