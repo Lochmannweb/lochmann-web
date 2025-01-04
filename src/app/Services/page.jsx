@@ -68,6 +68,7 @@ const Title = styled.div({
 const Subheader = styled.div({
   textAlign: 'center',
   color: 'gray',
+  margin: 'auto',
     [`@media (min-width: ${breakpoints.md})`]: {
       fontSize: '20px',
     },
@@ -99,10 +100,12 @@ const ContentSubheader = styled.div({
     fontSize: '15px',
     textAlign: 'center',
     color: 'gray',
+    margin: 'auto',
     [`@media (min-width: ${breakpoints.md})`]: {
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
       fontSize: '20px',
+      width: '80%',
     },
   })
 
@@ -142,6 +145,7 @@ const DesignContainerTtitle = styled.div({
   })
 
 const DesignContainerContent = styled.div({
+  color: 'gray',
     [`@media (min-width: ${breakpoints.md})`]: {
     },
     [`@media (min-width: ${breakpoints.lg})`]: {
@@ -169,33 +173,33 @@ const Aboutpage = () => {
             <ContentSubheader>{ServicesData.UXUI.subheader4}</ContentSubheader>
             <ContentContainer>
                 <DesignContainer>
-                    <img className='md:m-0' src="/settings.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle> 
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/services-ps.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.UXUI.services.ps.title}</DesignContainerTtitle> 
+                    <DesignContainerContent>{ServicesData.UXUI.services.ps.content}</DesignContainerContent>
                 </DesignContainer>
                 
                 <DesignContainer>
-                    <img className='md:m-0' src="/chat_1.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/services-il.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.UXUI.services.il.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.UXUI.services.il.content}</DesignContainerContent>
                 </DesignContainer>
                 
                 <DesignContainer>
-                    <img className='md:m-0' src="/lowest-price.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/spline.png" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.UXUI.services.spline.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.UXUI.services.spline.content}</DesignContainerContent>
                 </DesignContainer>
 
                 <DesignContainer>
-                    <img className='md:m-0' src="/chat_1.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <h1 className='text-5xl'>UX</h1>
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.UXUI.services.ux.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.UXUI.services.ux.content}</DesignContainerContent>
                 </DesignContainer>
                 
                 <DesignContainer>
-                    <img className='md:m-0' src="/lowest-price.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <h1 className='text-5xl'>UI</h1>
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.UXUI.services.ui.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.UXUI.services.ui.content}</DesignContainerContent>
                 </DesignContainer>
             </ContentContainer>
         </Content>
@@ -211,45 +215,45 @@ const Aboutpage = () => {
         <Content>
             <ContentContainer>
                 <DesignContainer>
-                    <img className='md:m-0' src="/settings.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle> 
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/js-icon.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.Programmering.services.js.title}</DesignContainerTtitle> 
+                    <DesignContainerContent>{ServicesData.Programmering.services.js.content}</DesignContainerContent>
                 </DesignContainer>
                 
                 <DesignContainer>
-                    <img className='md:m-0' src="/chat_1.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/services-ts.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.Programmering.services.ts.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.Programmering.services.ts.content}</DesignContainerContent>
                 </DesignContainer>
                 
                 <DesignContainer>
-                    <img className='md:m-0' src="/lowest-price.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/services-astro.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.Programmering.services.astro.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.Programmering.services.astro.content}</DesignContainerContent>
                 </DesignContainer>
 
                 <DesignContainer>
-                    <img className='md:m-0' src="/chat_1.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/services-next.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.Programmering.services.nr.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.Programmering.services.nr.content}</DesignContainerContent>
                 </DesignContainer>
                 
                 <DesignContainer>
-                    <img className='md:m-0' src="/lowest-price.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/services-css.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.Programmering.services.css.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.Programmering.services.css.content}</DesignContainerContent>
                 </DesignContainer>
 
                 <DesignContainer>
-                    <img className='md:m-0' src="/chat_1.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/services-html.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.Programmering.services.html.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.Programmering.services.html.content}</DesignContainerContent>
                 </DesignContainer>
                 
                 <DesignContainer>
-                    <img className='md:m-0' src="/lowest-price.svg" alt="svg" width={60} />
-                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>Title</DesignContainerTtitle>
-                    <DesignContainerContent>Text</DesignContainerContent>
+                    <img className='md:m-0' src="/services-tailwind.svg" alt="svg" width={60} />
+                    <DesignContainerTtitle className=' md:text-xl md:mt-5'>{ServicesData.Programmering.services.tailcss.title}</DesignContainerTtitle>
+                    <DesignContainerContent>{ServicesData.Programmering.services.tailcss.content}</DesignContainerContent>
                 </DesignContainer>
             </ContentContainer>
         </Content>
