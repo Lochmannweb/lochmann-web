@@ -9,7 +9,6 @@ const breakpoints = {
   lg: '1024px',
 };
 
-// Keyframes for fade-up animation
 const fadeUp = `
   @keyframes fadeUp {
     from {
@@ -29,7 +28,6 @@ const IMG = styled.div({
   borderColor: '#1c1c1c',
   borderWidth: 'thin',
   backgroundImage: `url('/glas-bg.jpg')`,
-  // filter: 'saturate(4)',
   backgroundSize: 'cover',
   backgroundRepeat: 'no-repeat',
   justifySelf: 'center',
@@ -37,7 +35,6 @@ const IMG = styled.div({
   [`@media (min-width: ${breakpoints.md})`]: {
     backgroundImage: `url('/glas-bg.jpg')`,
     width: '95%',
-    // backgroundSize: 'contain',
     },
   [`@media (min-width: ${breakpoints.lg})`]: {
     width: '97%',
@@ -82,7 +79,6 @@ const HeaderTitle = styled.div({
     fontSize: '60px',
     lineHeight: '5.5rem',
     width: '80%',
-    // marginTop: '-4rem',
     fontFamily: 'Fantasy',
   },
 
@@ -97,41 +93,11 @@ const HeaderTitle = styled.div({
 });
 
 
-// const Subheader = styled.div({
-//   fontSize: '35px',
-//   textAlign: 'center',
-//   marginBottom: '0.5rem',
-//   lineHeight: '2rem',
-//   fontFamily: 'Fantasy',
-
-//   // Animation
-//   opacity: '0', 
-//   animation: 'fadeUp 1s ease-in-out forwards',
-//   animationDelay: '1s',
-//   ...fadeUp,
-
-//   [`@media (min-width: ${breakpoints.md})`]: {
-//     fontSize: '60px',
-//     lineHeight: '5.5rem',
-//     marginTop: '-2rem',
-//   },
-
-//   [`@media (min-width: ${breakpoints.lg})`]: {
-//     fontSize: '100px',
-//     lineHeight: '3rem',
-//     marginTop: '2rem',
-//   }
-// });
-
-
 const ContentContainer = styled.div({
   display: 'grid',
   gap: '1rem', 
   lineHeight: '0rem',
   fontFamily: 'emoji',
-  // [`@media (min-width: ${breakpoints.lg})`]: {
-  //   marginBotom: '5rem',
-  // },
 });
 
 const Content1 = styled.div`
