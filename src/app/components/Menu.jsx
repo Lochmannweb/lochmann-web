@@ -104,13 +104,11 @@ const LinksContainer = styled.div({
     justifyContent: 'center',
     borderRadius: '25px',
     marginLeft: '-4rem',
-    width: '45%',
+    width: 'fit-content',
+    paddingLeft: '2rem',
+    paddingRight: '2rem'
   },
   [`@media (min-width: ${breakpoints.lg})`]: {
-    background: 'linear-gradient(0deg, #915d5d, #ffffff00)',
-    justifyContent: 'center',
-    borderRadius: '25px',
-    width: '25%',
   },
 });
 
