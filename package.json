@@ -9,14 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.13.3",
-    "@emotion/styled": "^11.13.0",
+    "@chakra-ui/react": "^3.27.0",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
     "@fontsource/keania-one": "^5.1.0",
     "@formspree/react": "^2.5.1",
     "@mui/material": "^6.1.6",
     "@splinetool/react-spline": "^4.1.0",
     "@splinetool/runtime": "^1.9.36",
     "@supabase/supabase-js": "^2.47.8",
+    "framer-motion": "^12.23.13",
     "gsap": "^3.12.5",
     "next": "^14.2.14",
     "polished": "^4.3.1",

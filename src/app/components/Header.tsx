@@ -1,17 +1,20 @@
 import React from "react";
-// import Spline from "@splinetool/react-spline";
 
 export default function Header() {
+  const mobileSize = "70vh";
+  const DesktopSize = "885px";
+
   return (
     <>
       <embed
-        style={{
-          marginTop: '-5.5rem',
-          zIndex: '5',
-        }}
         src="https://my.spline.design/nexbotrobotcharacterconcept-vbQChpTsbMVyEQBoIuOhonls/"
-        width="100%"
-        height="890px"
+        style={{ 
+          marginTop: "-5.5rem", 
+          zIndex: "1", 
+          width: "100%", 
+          height: mobileSize ? DesktopSize : DesktopSize, 
+          // position: "relative"
+        }}
       />
       <div style={{ width: "18vh", height: "3rem", backgroundColor: "black", position: "absolute", right: "0", marginTop: "-4rem" }} />
     </>
