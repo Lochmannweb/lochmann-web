@@ -213,7 +213,8 @@ export default function Header() {
 
   return (
     <>
-    <IMG>
+    <h1>Lochmann Web</h1>
+    {/* <IMG>
       <Container>
           <HeaderTitle>{ForsideData.subheader}</HeaderTitle>
           <ContentContainer>
@@ -223,7 +224,7 @@ export default function Header() {
           </ContentContainer>
           <Button><a  href="/Contact">GET IN TOUCH</a></Button>
       </Container>
-    </IMG>
+    </IMG> */}
     </>
   );
 }

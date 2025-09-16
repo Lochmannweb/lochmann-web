@@ -13,11 +13,11 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
       <body>
-        <Menu />
+        {/* <Menu /> */}
           <main>
           {children}
           </main>
-        <CustomerInformation />
+        {/* <CustomerInformation /> */}
       </body>
     </html>
   );
