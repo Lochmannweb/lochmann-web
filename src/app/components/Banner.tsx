@@ -13,8 +13,10 @@ export default function App() {
           fontSize: '2rem',
           marginTop: '2rem',
           fontFamily: 'auto',
+          lineHeight: '25px',
         }}>
-          LOCHMANNWEB
+          LOCHMANNWEB <br />
+          <p style={{ fontSize: "9px", fontWeight: "block", color: "gray" }}>( LOW )</p>
         </h1>
         <p 
           style={{ 
@@ -30,7 +32,7 @@ export default function App() {
             padding: '4rem 3rem',
             filter: 'drop-shadow(2px 4px 6px black)',
           }}>
-          Creating something new - comming soon!
+          Creating something new - coming soon!
         </p>
     </>
   );

@@ -11,7 +11,7 @@ export default function Header() {
         }}
         src="https://my.spline.design/nexbotrobotcharacterconcept-vbQChpTsbMVyEQBoIuOhonls/"
         width="100%"
-        height="895px"
+        height="890px"
       />
       <div style={{ width: "18vh", height: "3rem", backgroundColor: "black", position: "absolute", right: "0", marginTop: "-4rem" }} />
     </>
