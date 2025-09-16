@@ -18,14 +18,14 @@ const Container = styled.div({
 const Page = () => {
 
   return (
-    <Container> 
-      <Header/>
+    <> 
+      {/* <Header/>
       <Banner />
       <Tech/>
       <Projects/>
       <Feedback/>
-      <ContactForm />
-    </Container> 
+      <ContactForm /> */}
+    </> 
   )
 }
 
