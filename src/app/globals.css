@@ -1,17 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
-/* mobil */
+
 body {
-  /* background-color: #080505; */
   background-color: black;
   color: white;
+  margin: 0;
 }
 
-@keyframes scroll-reveal {
-  to {
-    background-size: 100% 100%;
-  }
-}
 

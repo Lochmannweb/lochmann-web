@@ -1,8 +1,9 @@
 import "./globals.css";
+import Banner from './components/Banner'
 
 export const metadata = {
-  title: "LochmannWeb",
-  description: "Enhance Your Website's Performance & Impact",
+  title: "LOCHMANNWEB",
+  description: "",
 }; 
 
 export default function RootLayout({ children }) {
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <link rel="icon" type="image/png" sizes="32x32" href="/logo.png" />
       <body>
+        <Banner />
           <main>
           {children}
           </main>
