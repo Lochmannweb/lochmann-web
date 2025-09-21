@@ -28,7 +28,8 @@ export default function CasesPage() {
           />
             <Box py={2} display={{ xs: "grid", sm: "flex" }} justifyContent={"space-between"} alignItems={"center"} width={{ xs: "80%", sm: "60%" }} justifySelf={"anchor-center"}>
               <Link 
-                href="https://secondswing.vercel.app/" 
+                // href="https://secondswing.vercel.app/" 
+                href="#" 
                 fontSize={{ xs: "0.5rem", sm: "0.75rem" }} 
                 fontWeight={"500"} 
                 textAlign={"start"}
