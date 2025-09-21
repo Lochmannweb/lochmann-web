@@ -43,7 +43,7 @@ export default function Header() {
             marginTop: "-2rem", 
             zIndex: 1,       
             width: "100%", 
-            height: "767px",
+            height: "780px",
             position: "relative",
             clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 100px), calc(100% - 200px) calc(100% - 100px), calc(100% - 200px) 100%, 0 100%"
           }}
