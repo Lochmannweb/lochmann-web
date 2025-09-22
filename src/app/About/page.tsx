@@ -32,7 +32,7 @@ function page() {
           >
             Full stack developer <br /> UX / UI Designer
         </Typography>
-        <Box position={"absolute"} top={{ xs: "15rem", sm: "20rem", md: "28rem"  }} paddingLeft={{ xs: "1rem", md: "15%" }} zIndex={5} >
+        <Box position={"absolute"} top={{ xs: "17rem", sm: "20rem", md: "28rem"  }} paddingLeft={{ xs: "1rem", md: "15%" }} zIndex={5} >
           {/* <Typography fontSize={"0.7rem"} color="gray" borderBottom={{ xs: "1px solid lightgray", sm: "none" }} marginBottom={"0.5rem"}>Specifications</Typography> */}
           <Box display={{ xs: "grid", md: "flex" }}>
             <Typography fontSize={"0.7rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }}>SQL</Typography> 
