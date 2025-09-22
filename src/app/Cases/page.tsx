@@ -7,10 +7,10 @@ export default function CasesPage() {
   return (
     <Box 
       sx={{ 
-        // position: "absolute",
-        // alignSelf: "anchor-center",
+        position: { md: "absolute" },
+        alignSelf: { md: "anchor-center" },
         textAlign: { xs: "center" },
-        marginTop: { xs: "8rem", sm: "10rem", md: "12rem" },
+        marginTop: { xs: "8rem", sm: "10rem", md: "0" },
       }}>
         <Box>
           <Typography 
