@@ -7,12 +7,26 @@ export default function CasesPage() {
   return (
     <Box 
       sx={{ 
-        position: "absolute",
-        alignSelf: "anchor-center",
-        textAlign: "center",
-        top: "3rem",
+        // position: "absolute",
+        // alignSelf: "anchor-center",
+        textAlign: { xs: "center" },
+        marginTop: { xs: "8rem", sm: "10rem", md: "12rem" },
       }}>
         <Box>
+          <Typography 
+            position={"absolute"} 
+            display={"flex"}
+            justifyContent={"center"}
+            marginTop={{ xs: "-0rem", sm: "", md: "" }} 
+            zIndex={5}
+            alignSelf={"center"}
+            justifySelf={"anchor-center"}
+            fontSize={{ xs: "1.5", sm: "1.5", md: "1.8rem" }} 
+            fontFamily={"sans-serif"}
+            textTransform={"uppercase"}
+            >
+              Comming soon
+          </Typography>
           <Box
             component="img"
             src="/cases/case-ss.png"
@@ -23,13 +37,13 @@ export default function CasesPage() {
               overflow: "hidden",
               backgroundSize: "cover",
               backgroundPosition: "center",
-              filter: "opacity(1)",
+              filter: "opacity(0.3)",
             }}
           />
             <Box py={2} display={{ xs: "grid", sm: "flex" }} justifyContent={"space-between"} alignItems={"center"} width={{ xs: "80%", sm: "60%" }} justifySelf={"anchor-center"}>
               <Link 
                 // href="https://secondswing.vercel.app/" 
-                href="#" 
+                href="/#" 
                 fontSize={{ xs: "0.5rem", sm: "0.75rem" }} 
                 fontWeight={"500"} 
                 textAlign={"start"}
@@ -42,7 +56,7 @@ export default function CasesPage() {
                     "&:hover": { color: "#2fc913" }
                 }}
                 >
-                  Second Swing - 
+                  Second Swing -
               </Link>
               <Typography textAlign={"start"} fontSize={{ xs: "0.5rem", sm: "0.75rem" }}  fontWeight={"500"} letterSpacing={"0.2rem"} textTransform={"uppercase"}>Online E-commerce application</Typography>
             </Box>

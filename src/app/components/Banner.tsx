@@ -44,9 +44,10 @@ export default function Navbar() {
         {/* Navigation links */}
         <Box 
           sx={{ 
-            // display: "flex", 
-            margin: { xs: "0", sm: "0 auto" } 
+            margin: { xs: "0", sm: "0 auto" }, 
           }}
+          gap={{ xs: "0", sm: 1 }}
+          display={"flex"}
         >
           {links.map((link) => (
             <Link key={link.href} href={link.href}>

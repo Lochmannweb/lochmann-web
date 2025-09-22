@@ -7,15 +7,15 @@ export default function Header() {
     <Box style={{ position: "relative" }}>
       <Typography  
         position={"absolute"}
-        fontSize={{ xs: "2rem", sm: "3rem", md: "4rem" }}
+        fontSize={{ xs: "2rem", sm: "3rem", md: "5rem" }}
         textTransform={"uppercase"}
-        lineHeight={{ xs: "2rem", sm: "3.5rem" }}
+        lineHeight={{ xs: "2rem", sm: "3.5rem", md: "5rem" }}
         left={{ xs: "0", sm: "1rem",}}
-        top={{ xs: "20rem", sm: "20rem", md: "20rem" }}
+        top={{ xs: "20rem", sm: "20rem", md: "23rem" }}
         textAlign={"center"}
         fontFamily={"fantasy"}
         zIndex={5}
-        px={{ xs: "1rem", md: "15rem" }}
+        px={{ xs: "1rem", sm: "15rem", md: "20rem" }}
       >
         Unique web design tailored for modern digital solutions
       </Typography>
@@ -43,7 +43,7 @@ export default function Header() {
             marginTop: "-2rem", 
             zIndex: 1,       
             width: "100%", 
-            height: "780px",
+            height: "100vh",
             position: "relative",
             clipPath: "polygon(0 0, 100% 0, 100% calc(100% - 100px), calc(100% - 200px) calc(100% - 100px), calc(100% - 200px) 100%, 0 100%"
           }}
