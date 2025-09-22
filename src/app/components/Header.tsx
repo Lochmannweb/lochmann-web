@@ -9,14 +9,16 @@ export default function Header() {
         <Typography  
           className="montserrat-uniquifier"
           position={"absolute"}
-          fontSize={{ xs: "1.5rem", sm: "2rem", md: "2.5rem" }}
+          fontSize={{ xs: "1rem", sm: "2rem", md: "2.5rem" }}
           padding={{ xs: "1rem" }}
           textTransform={"uppercase"}
-          lineHeight={{ xs: "1.5rem", sm: "2rem", md: "3rem" }}
+          lineHeight={{ xs: "1.5rem", sm: "2.5rem", md: "3rem" }}
           justifySelf={"anchor-center"}
           alignSelf={"anchor-center"}
           textAlign={"center"}
-          fontFamily={"Montserrat, sans-serif"}
+          // fontFamily={"Montserrat, sans-serif"}
+          fontFamily={"sans-serif"}
+          letterSpacing={6}
           zIndex={5}
         >
           Unique web design <br /> tailored for modern digital solutions

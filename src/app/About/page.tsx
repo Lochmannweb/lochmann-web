@@ -21,26 +21,27 @@ function page() {
         </Typography>
         <Typography 
           position={"absolute"} 
-          top={{ xs: "9.5rem", sm: "15rem", md: "16rem"  }}  
+          top={{ xs: "9.5rem", sm: "15rem", md: "17rem"  }}  
           paddingLeft={{ xs: "1rem", md: "15%" }}
           zIndex={5} 
           color="white" 
-          fontSize={{ xs: "2rem", md: "5rem" }}
-          lineHeight={{ xs: "2rem", md: "5rem" }}
-          fontFamily={"fantasy"}
+          fontSize={{ xs: "1.5rem", sm: "2rem", md: "3rem" }}
+          lineHeight={{ xs: "1.5rem", sm: "2rem", md: "3rem" }}
+          letterSpacing={6}
+          fontFamily={"sans-serif"}
           textTransform={"uppercase"}
           >
             Full stack developer <br /> UX / UI Designer
         </Typography>
-        <Box position={"absolute"} top={{ xs: "17rem", sm: "20rem", md: "28rem"  }} paddingLeft={{ xs: "1rem", md: "15%" }} zIndex={5} >
+        <Box position={"absolute"} top={{ xs: "17rem", sm: "20rem", md: "25rem"  }} paddingLeft={{ xs: "1rem", md: "15%" }} zIndex={5} >
           {/* <Typography fontSize={"0.7rem"} color="gray" borderBottom={{ xs: "1px solid lightgray", sm: "none" }} marginBottom={"0.5rem"}>Specifications</Typography> */}
           <Box display={{ xs: "grid", md: "flex" }}>
-            <Typography fontSize={"0.7rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }}>SQL</Typography> 
-            <Typography fontSize={"0.7rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} color="gray">Python</Typography> 
-            <Typography fontSize={"0.7rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} >HTML</Typography> 
-            <Typography fontSize={"0.7rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} color="gray">CSS</Typography> 
-            <Typography fontSize={"0.7rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} >Typescript</Typography> 
-            <Typography fontSize={"0.7rem"} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} color="gray">Database</Typography> 
+            <Typography fontSize={"0.9rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }}>SQL</Typography> 
+            <Typography fontSize={"0.9rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} color="gray">Python</Typography> 
+            <Typography fontSize={"0.9rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} >HTML</Typography> 
+            <Typography fontSize={"0.9rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} color="gray">CSS</Typography> 
+            <Typography fontSize={"0.9rem"} borderRight={{ md: "1px solid white" }} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} >Typescript</Typography> 
+            <Typography fontSize={"0.9rem"} paddingRight={{ md: "1rem" }} paddingLeft={{ md: "1rem" }} color="gray">Database</Typography> 
           </Box>
         </Box>
       </Box>
